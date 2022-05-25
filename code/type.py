@@ -11,9 +11,12 @@ main()
 
 ---------------------------------------
 
-# Prints the type of object for example 15 will be 
+# Prints the type of a few data types for example 15 will execute to <class 'int'> 
 #
 #<class 'int'> 
 #at execution 
+
+
+
 # and finally, print(main) will show the programs in memory referance at execution 
 #<function at main 0x10ce57eb0>
