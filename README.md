@@ -1,2 +1,2 @@
 # python-for-school
-tracking cmis120 intro to algorithms and problem solving 
+#Using github to follow + track cmis120 intro to algorithms and problem solving using 
