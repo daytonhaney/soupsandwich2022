@@ -1,0 +1,49 @@
+# Python code
+# This program will calculate and display the cost of purchasing a set of tires.
+# The user will be prompted for how many tires to purchase. 
+
+# Developer: Faculty CMIS102   Date: Jan 31, 2014
+
+def main():
+    #Declare variables - leftover from C-code - not required for Python
+    #int numTires
+    #float tirePrice, installPrice, tireCost, installCost, totalCost
+
+    #Initialize variables
+    tirePrice = 140.0	# Notice that I'm assigning these values to variables
+    installPrice = 5	# These variables will be used in the calculations.
+
+    # Display Welcome message
+    print("\nWelcome to Bernie's Tire service program")    #notice the \n  is anew line
+    print("\nThis program will calculate the cost of your tire purchase , including installation")
+
+    #Prompt user for number of tires and Get user response
+    numTires = int(input("\n How many tires would you like to purchase ? \t    "))   #notice the \t  is a tab
+
+    #Calculate the cost of tires
+    tireCost = tirePrice * numTires
+
+    #Calculate the cost if installation
+    installCost = installPrice * numTires
+
+    #Calcuate the total cost 
+    totalCost = tireCost + installCost
+
+    #Display the output
+    print(" The       cost of tires is:          ", tireCost)
+    print(" The       cost of installation  is:  ", installCost)
+    print(" The Total cost of your purchase is:  ", totalCost)
+
+#--- Execute --------------------------------------------------------
+main()
+    
+
+# --------------------------------------------------------------------------------
+
+# Exercises to try....
+# 1.	Edit the Welcome msg
+#	- edit the print statement so that it shows your name.
+#	- add another print statement
+#	- Save and Execute
+# 2.	Apply a $50 discount to the Total cost and display the discounted Total cost 
+#	- Save and Execute
