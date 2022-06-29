@@ -8,6 +8,11 @@ def my_greeting():
     print(my_info_template.format(name,my_class,date))
 
 
+
+
+
+
+
 def main():
     my_greeting()
 

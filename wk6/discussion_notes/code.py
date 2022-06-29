@@ -16,13 +16,10 @@ else:
 
 
 def get_average(quartly_totals):
-    my_sums = sum(quartly_totals)
-    my_totals = len(quartly_totals)
-    average_quartly_total = my_sums / my_totals
-    return average_quartly_total
+    question = input("Enter Quiz Grades: ")
+   
+    #print(zip(question))
+    return(quartly_totals)
 
 
-quartly_totals = [10, 20, 20, 34, 22, 32, 23, 35]
-average_quartly_total = get_average(quartly_totals)
-print(f"{quartly_totals}")
-print(f"{average_quartly_total}")
+
