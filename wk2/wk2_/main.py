@@ -16,8 +16,40 @@ print('{:<10}{:^22}{:>7}'.format("1.00$","10.00$",".25$"))
 print(ui,'\n')
 
 
-
 print("\n\nok")
+
+def schedule():
+    data = []
+   prompt_for_ForP = input("Please enter your choice of position, Note: Cannot be changed\n","Full","run"
+    if
+    full_time = 20
+    part_time = 10
+
+        print("You're, expected to deliver 40 papers a day")
+        data.append(data)
+
+if not "__name__" == "__main__":
+    schedule()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def my_scripts(args):
     result = []
