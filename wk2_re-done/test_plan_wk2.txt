@@ -1,0 +1,61 @@
+Jason Preneveau          CMIS 102           Summer 2022 
+
+
+DESIGN
+
+
+
+# Initialize gloabls 
+
+# user interface design, lite version
+
+# print a title banner, centered
+
+# Enter main()
+
+# user conditional flow
+
+# prompt the user if they will be full time or part time employee
+
+# Display the pay rate, FT and PT workers, + commission per paper delivered
+
+# Display FT paper delivery goal = 100 papers 
+# Display PT paper delivery goal = 50 papers 
+
+
+# Initialize the control flow via prompt comparision (!= == )
+
+
+# if the user respose is full time - 
+
+  - ask the number of papers they delvered 
+
+  - multiply the FT/PT salary to # of papers delivered
+
+  - add commission
+
+# Display the results back to uer 
+# Exit program 
+
+# Additional - Trying to collect all data into data [] array 
+
+______________________________________________________________________________
+
+#Test Plan                                                                           
+1.                                                             
+# determine if the user is                   result:   : full time 
+
+a part timer or full timer                   expected  : full time 
+ 
+- full timers work 20 hrs a week
+- part timers work 10hr
+
+# hours = input("full time or part time worker?n\ ")
+
+>>> full time 
+# if (hours == 'full time'):                 result: : part time 
+
+ // full time program activates //           expected : part time  
+
+ else(hours =! 'full time')                    do math 
+   // part time program activates//         Finish with weekly salary  
