@@ -1,0 +1,40 @@
+
+
+In and Out Cleaners 
+
+Cleaning - Yard Services 
+
+
+Regular:              Premium:
+sweep/mop            +Bedrooms
+vacuum                Closets
+dusting               Bathrooms
+windows
+main areas
+
+$$                  $$$$
+
+
+determined by number of rooms, 
+just add 75.00 for premium 
+
+
+    Small                Med House        Large House
+less than or = to 4     between 4 & 6     7 + rooms   
+
+ $$                          $$$             $$$$$ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+Greeting function:
+# Iterates over the greeting variables with x and prints
+# the values in a column 
