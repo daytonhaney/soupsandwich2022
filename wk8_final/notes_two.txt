@@ -1,0 +1,7 @@
+Test:
+
+Trying to output the users choice of what service they want into an array. Here is a shot of the failed test + code. 
+
+
+
+
