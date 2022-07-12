@@ -28,7 +28,7 @@ def schedule():
         print("You're, expected to deliver 40 papers a day")
         data.append(data)
 
-if not "__name__" == "__main__":
+if  "__name__" == "__main__":
     schedule()
 
 

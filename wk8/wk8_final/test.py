@@ -12,18 +12,6 @@ print(x)
 print(x[:])
 b = "{}"
 ask = []
-d = [[]]
+d = [[3], 1, 2.2]
 e = ""
-
-
-options = [mow, trim, prune]
-
-
-def youroptions(options):
-
-    ask = input("")
-    ask = ask.append(c.append(ask))
-    return(ask)
-
-
-print(ask)
+print(d)

@@ -14,7 +14,8 @@ def my_greeting():
         print(x)
     title = "Welcome to In and Out Services\n"
     ctitle = title.center(80)
-    print(ctitle)
+    from test import mow 
+    print(title,mow)
 
 
 def main():
@@ -22,3 +23,4 @@ def main():
 
 
 main()
+
