@@ -1,6 +1,4 @@
 
-
-
 def my_greeting(): 
 # Somthing new and differnt to put my welcome message out there              
     my_name, my_date, my_class = "Jason Preneveau", "9 July 2022", "CMIS-120\n\n\n"           
@@ -63,12 +61,15 @@ def user_interface():
     return reg_indoor_price, delux_indoor_price, outdoor_package
   
 def prompt_customer():
-        valid_name = False 
-        prompt_user = input(f"Please enter your name---->")
-        greet_user = "Welcome,{}"
+    cust_name = []   
+    prompt_user = input(f"Please enter your name---->")
+    prompt_user = input()
+    input(f"{prompt_user}")
+        
+    print(greet_user)
+prompt_customer()
 
-
-
+ 
 
 
 
@@ -77,7 +78,6 @@ def print_final_message(service_type,service_price,total_price):
     print("\t\tThank you for choosing---> ", service_type) 
     print("\t\tTotal amount due for services--->", service_price,)
     print("\t\tFinal total--->", total_price)
-    
 
 
 

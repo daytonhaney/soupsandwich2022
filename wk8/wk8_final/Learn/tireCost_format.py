@@ -1,4 +1,4 @@
- Python code
+
 # This program will calculate and display the cost of purchasing a set of tires for each customer.
 # The user will be prompted for how many tires to purchase. 
 # The program will validate the user input.

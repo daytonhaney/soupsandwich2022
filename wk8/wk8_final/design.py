@@ -13,12 +13,11 @@ def title():
     partt = "Part Timer"  # needed to define a string for each positions in the global scope
     fuullt = "Full Timer"
 
-    print(ui_spaces)
-    print(ui)
-
+  
+   
 
 print('{:<13}{:^20}{:<20} {:>10}'.format("Indoor Services",
       "Outdoor Serives", "FT WEEKLY SALARY", "PT WEEKLY SALARY"))
-print(ui_spaces)
+
 print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$", ".25$", "20.00", "10.00"))
-print(ui, '\n')
+
