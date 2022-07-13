@@ -22,7 +22,7 @@ options = [mow, trim, prune]
 
 
 def youroptions(options):
-
+ 
     ask = input("")
     ask = ask.append(ask)
     return(ask)
