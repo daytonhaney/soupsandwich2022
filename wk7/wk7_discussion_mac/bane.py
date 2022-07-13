@@ -1,6 +1,15 @@
-""" 
-  /Users/jasonpreneveau/.local/bin/lvim 
+def calc():
+  pass
 
- """
 
-print("OK")  
+def function(a,b):
+ 
+
+
+def function(a,b):
+  z = a + b 
+  y = z * 5
+  print("The ")
+  return (y)
+
+
