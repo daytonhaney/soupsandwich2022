@@ -1,5 +1,22 @@
-def my_greeting():
-    # Using a for statement to prompt my class greeting message.
+
+delux_indoor_price = 150  
+reg_indoor_price = 75 
+outdoor_package = 100 
+
+def my_greeting(): 
+    """This prgram will present a customer with a business model.
+        
+        The customer(user) will have the opportunity to chooose
+        between several different Clearning Packages. 
+        The the user will select the package by entering a number,
+        for example, 5 = General cleaning package, then computations 
+        will run and provide the user with the total price of their selections
+         \nUsing a for statement to prompt my class greeting message
+    
+    
+    """
+    
+    
     my_name, my_date, my_class = "Jason Preneveau", "9 July 2022", "CMIS-120\n\n\n"
     for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
         # about _, likee placeholder
@@ -9,8 +26,8 @@ def my_greeting():
     print(opening_hint.center(80))
 
 
-def user_interface(template):
-    # Building a user interface for customers
+def user_interface():
+    """ This function is the customer display model"""
     sp = ''
     lines = "="*78
 
@@ -18,7 +35,7 @@ def user_interface(template):
     print(lines)
     print(lines)
     # trying to maintain P#P8 Standard 78 characters
-    print("="*24, "**Welcome to In & Out Services**", "="*28)
+    print("="*22, "**Welcome to In & Out Services**", "="*22)
     print(lines)
     print(lines)
 
@@ -31,7 +48,7 @@ def user_interface(template):
     print(" \t\tGeneral Tidying  \t\tIncludes Bed / Bath +\n\t\t\t  \t\t\tClosets\n\t\t\t  \n\t\t\t   \t\t\t*1/2 Price Next Visit")
     print(" \t\t")
     print(sp)
-    print(sp)
+    print(sp) 
     print("\t\tOutdoor "
           "Services "
           "Include: \n"
@@ -46,23 +63,17 @@ def user_interface(template):
     print(lines)
     print(lines)
     print(sp)
+    return(user_interface)
+    
+def user_name():
+    valid_name = False
+    user_name = input("Please Enter your name, hit enter when done: ")
+    if "1234567890" == user_name:
 
-    delux_indoor_price = 150.00
-    reg_indoor_price = 78
-    outdoor_package = 100
-
-    return reg_indoor_price, delux_indoor_price, outdoor_package
-
-
-def prompt_customer():
-    valid_customer = False
-    prompt_user = input("Please enter your name---->")
-    if prompt_user == prompt_user.isalpha():  # simliar is isdigit, isalpha is checking for
-        valid_customer = True
-        print(f"Welcome, {prompt_user}")
+        print("Invaid Entry, hit enter to continure...")
     else:
-        print("OK")
-
+        valid_name = True
+        return user_name
 
 def print_final_message(service_type, service_price, total_price):
     print("\t\tThank you for choosing---> ", service_type)
@@ -99,15 +110,13 @@ outdoor_services = [
     "WeedWacking",
     "Pressure Wash",
     float(200.00)
-]
+]  
 
 
 def main():
     my_greeting()
-
-    user_interface("template")
-
-
+    user_interface()   
+    
 main()
 """
 trim = "trim shrubs"
