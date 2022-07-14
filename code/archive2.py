@@ -1,20 +1,15 @@
-
-
-
-
-import webbrowser
-import requests
-
-print("Let's find an old website.")
-site = input("Type a website URL: ")
-era = input("Type a year, month, and day, like 20150613: ")
-url = "http://archive.org/wayback/available?url=%s&timestamp=%s" % (site, era)
-response = requests.get(url)
-data = response.json()
-  try:
-     old_site = data["archived_snapshots"]["closest"]["url"]
-     print("Found this copy: ", old_site)
-     print("It should appear in your browser now.")
-     webbrowser.open(old_site)
- except:
-     print("Sorry, no luck finding", site)
+def size_of_house(length,width):
+    """When the workers are on-site, they take the measurments of the house
+       """
+    internal_use_only = length * width
+    
+        if (internal_use_only >= int(5000)):
+            return reg_indoor_price + 150
+        elif(internal_use_only =< 5000 and >= int(2500):
+            return reg_indoor_price + 75
+        
+         
+    
+    return internal_use_on
+    
+       
