@@ -3,7 +3,7 @@ try:
     print(x)
 except:
     print("An exception occurred, Please Try again")
-    x = 23
-    print(x
+    #input("Please Try Again")
+    print(x)
     
     

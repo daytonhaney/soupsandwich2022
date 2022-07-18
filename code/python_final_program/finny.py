@@ -1,8 +1,4 @@
-from ast import ExceptHandler
-from time import sleep
-from tokenize import Name
-
-
+from time import sleep # Rather Propmping to display the model we slowly can print the model
 
 def my_greeting():
     """This prgram will present a customer with a business model.
@@ -62,17 +58,18 @@ def user_interface():
     return user_interface
 
  
-def new_customer(name): #trying to keep all vars out of the global scope
-    """ Function also validates for spam and if valid, proceeds to main  """
+def new_customer(name): 
+    """ Function that prints the services which are in lists and in the function we ask for the name and pass it
+    through an exception making sure name  =! an integer """
     
-    auditor = []
-    indoor_regular_services = [  # keeping vars out of the global scope ...
-        "Dusting",               # for safer code        
+    auditor = [] # storing the user name in a list call auditor
+    indoor_regular_services = [  # (trying )keeping vars out of the global scope ...
+        "Dusting",                       
         "Sweep/Mop",
         "General-Tidying",
         "Bathrooms",
     ]
-    indoor_delux = [
+    indoor_deluxe = [
         "+Regular-Services", 
         "Closets",
         "Bedrooms",
@@ -88,30 +85,25 @@ def new_customer(name): #trying to keep all vars out of the global scope
         
     ]
     
-    
-    try:
+    try: # 
         name = input("Please Enter Name:".center(50))
         name == int(name)   
     except Exception:
+        print(name)
         print(" When ready, select by using 1 , 2 , or 3  ".center(50))
     
-    finally:
-        #except ValueError:
-        #print("Welcome to the In and and Out Cleaners \n")
-
+    finally: #  if there is an error in the above code finally will keep the python runtime going to avoid crashes and system outages 
         print("--We offer Several packages...\n")
-    sleep(1.5)  # Using sleep for interactvity purposes
+    sleep(1.5)  # Not much logic proved  other than for than customer readability 
 
     print("[Inside Regular Cleaning]".center(50))
-
-    for _ in list(indoor_regular_services):
-        print(_.center(50),end="\n")
+    for _ in list(indoor_regular_services): # using _ as the variable to print the services which are lists...
+        print(_.center(50),end="\n")        # _ can be used as a throwaway variable  
     sleep(1.5)
     print(" ") # Had to add for code and program readability 
             
-    print("[Inside Delux Clearning]".center(50))
-            
-    for _ in indoor_delux: # Using _ as a throw away only to print the selections (indoor regular and delux, and outdoor services)
+    print("[Inside Deluxe Cleaning]".center(50))
+    for _ in indoor_deluxe: # Using _ as a throw away only to print the selections (indoor regular and delux, and outdoor services)
         print(_.center(50),end="\n")
     sleep(1.5)
     print(" ")
@@ -121,11 +113,12 @@ def new_customer(name): #trying to keep all vars out of the global scope
         print(_.center(50),end="\n")
     sleep(1.5)
     print(" ")
+    
     print("Prepare for customer selection:".center(50))
     sleep(1.5)
     print(" ")
-    print("last before return stmt")# debug print stmt
-    return name
+    print("---------")# debug print stmt
+    return name,auditor,indoor_regular_services,indoor_deluxe,outdoor_services
     
 
 
@@ -156,13 +149,8 @@ def print_final_message(service_type, service_price, total_price):
 def main():
     my_greeting()
     user_interface()
-
-    
-
-    name, auditor, outdoor_services,indoor_regular_services, indoor_delux = new_customer("name")
+    name, auditor, outdoor_services,indoor_regular_services, indoor_deluxe = new_customer("name")
     auditor.append(new_customer(name))
-    
-
     customer_transaction()
 
 
