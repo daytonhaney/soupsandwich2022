@@ -2,24 +2,19 @@
 
 __name__ = 'Jason Preneveau'
 __date__ = '28 June 2022'
-__credits__ = ['Jeromie Kirchoff', 'Victoria Mackie']
-__license__ = 'MSU'  # Makin' Shi* Up!
+__credits__ = ['']
+__license__ = 'Free and Open MSU '  # Making shit up
 __version__ = '1.0.1'
-__maintainer__ = 'Jeromie Kirchoff'
-__email__ = 'Jahomie04@gmail.com'
+__maintainer__ = 'Jason Preneveau'
+__email__ = 'jpnamausa@gmail.com'
 __status__ = 'Prototype'
 
-__course__ = 'cs108'
-__teammates__ = ['Jeromie Kirchoff']
+__course__ = 'CMIS-120'
+__teammates__ = ' ' 
 __laboratory__ = 'A13'
-__date__ = '2018/08/18'
-__username__ = 'JayRizzo'
+__date__ = '15 july 2022'
+__username__ = 'runtimejpp'
 __description__ = 'My First Project Program.'
-
-
-
-
-
 
 
 
