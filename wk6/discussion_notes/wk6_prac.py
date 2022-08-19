@@ -17,9 +17,9 @@ list_2 = [0, 2, 4]
 
 print(another_approach(list_1, list_2))
 
-list_3 = ['cat', 'bat', 'mat', 'cat', 'dog', ]
+list_33 = ['cat', 'bat', 'mat', 'cat', 'dog', ]
 
-print(list_3.index('mat'))
+print(list_33.index('mat'))
 
 
 x, y = input("Enter two values: ").split()
