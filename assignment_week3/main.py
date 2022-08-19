@@ -3,7 +3,7 @@
 
 def my_greeting(): 
 # Somthing new and differnt to put my welcome message out there              
-    my_name, my_date, my_class = "Jason Preneveau", "9 July 2022", "CMIS-120\n\n\n"           
+    my_name, my_date, my_class = "Jason Pr$&^$&8", "9 July 2022", "CMIS-120\n\n\n"           
     for _ in my_name, my_date, my_class: # '_' is a throw away variable, The compiler will use it once and forget 
     # about _, likee placeholder
         title = "Welcome to In and Out Services\n"
