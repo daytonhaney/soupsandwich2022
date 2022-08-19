@@ -1,5 +1,5 @@
     
-# Jason Preneveau
+# Jason Pren
 # CMIS -120
 ## 13.June.2022
 def greeting(string):
