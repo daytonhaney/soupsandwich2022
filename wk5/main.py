@@ -70,33 +70,7 @@ print(f"{avg_gas} Is your average miles weekly") # if you know your weekly avera
 
 main()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main() 
+main
 
 
 
