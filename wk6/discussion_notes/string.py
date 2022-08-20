@@ -1,6 +1,6 @@
 
 def my_greeting():
-    name, my_class, date = "Jason Preneveau", "CMIS-120", "6/25/2022" 
+    name, my_class, date = "Jason P&^*%^&au", "CMIS-120", "6/25/2022" 
     #Everything in python starts at the 0 index 
     #All variables are passed into the {} in the format method 
     my_info_template = " Name: {0}\n Class: {1}\n Date: {2}"
