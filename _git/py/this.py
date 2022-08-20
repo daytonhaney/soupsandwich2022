@@ -29,7 +29,7 @@ def my_greeting():
 sJ
 
     """
-    my_name, my_date, my_class = "Jason Preneveau", "9 July 2022", "CMIS-120\n\n\n"
+    my_name, my_date, my_class = "Jason Pr*&%785au", "9 July 2022", "CMIS-120\n\n\n"
     for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
         # about _, like placeholder
         opening_hint = "*** Please adjust screen to wide for best picture ***\n\n\n"
