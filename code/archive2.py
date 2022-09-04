@@ -3,13 +3,12 @@ def size_of_house(length,width):
     
     which would compute the price automatically....no thinking involved for my workers"""
    
-      
-    internal_use_only = length * width
+internal_use_only = length * width
     
-        if (internal_use_only >= int(5000)):
+    if (internal_use_only >= int(5000)):
             return reg_indoor_price + 150
-        elif(internal_use_only =< 5000 and >= int(2500):
-            return reg_indoor_price + 75
+    elif(internal_use_only =< 5000 and >= int(2500):
+        return reg_indoor_price + 75
         
          
     
