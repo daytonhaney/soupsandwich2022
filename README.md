@@ -5,11 +5,7 @@
 
 
 
-
-
-
-
 ###### All code is authored by yours truly 
 
 
-# All feedback welcomed 
+### All feedback welcomed  
