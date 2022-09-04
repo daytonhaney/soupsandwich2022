@@ -8,7 +8,7 @@ indoor_delux = [
     "Discount",
     "Senior Discount",
     float(200.00)
-    / home/jpp/GitHub/_git/py/this.py
+   
 
 ]
 outdoor_services = [
