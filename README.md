@@ -1,5 +1,5 @@
 # a purly functional implementation of python3 
-## CMIS120 Summer 2022 Python Intro to Problem Solving and Algorithms 
+## CMIS120 Intro to Problem Solving and Algorithms - python3.7
 ### most of my codebase
 #### no global variables allowed...kinda.
 
