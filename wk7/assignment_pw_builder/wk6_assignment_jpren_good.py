@@ -4,15 +4,15 @@ __date__ = '28 June 2022'
 __version__ = '1.1.2'
 
 print('# ' + '=' * 78) # Hacking my way to some type of UI 
-print('Name: ' + __name__) # I learned this method on headers this week also new favorite
+print('Name: ' + __name__) # 
 print('Date: ' + __date__)
 print('Course: ' + __course__)
 print('Version: ' + __version__)
 
 
-print('# ' + '=' * 78) # Hacking my way to some type of UI 
+print('# ' + '=' * 78) 
 caps = 'QWERTYUIOPASDFGHJKLZXCVBNM'
-nocap = 'qwertyuiopasdfghjklzxcvbnm' # introducing my globals as the actauly paramters 
+nocap = 'qwertyuiopasdfghjklzxcvbnm' # introducing my globals as the paramters 
 special = '!@#$%^&*()-_=+' # makes coming up with functions very easy ^ 
 nums: int = '0987654321'  
 check = True
