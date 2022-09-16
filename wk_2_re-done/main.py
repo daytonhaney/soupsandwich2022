@@ -6,8 +6,8 @@ def intro():
   #  return name,date,codeclass
 
 
-ui_spaces = " "
-# defining the title , a descrription of what the program does
+ui_spaces = " " # creating a user interface in the terminal is fun 
+
 corp = "This program will describe the pay schedule\nYou play as the paperboy determining his pay\n\n\n"
 paper_boy = "Welcome to Paper Boy 85'\n"
 paper_boy_center = paper_boy.center(70)
