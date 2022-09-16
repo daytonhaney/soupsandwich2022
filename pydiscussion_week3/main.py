@@ -8,7 +8,7 @@ print('----------------------------------------------------------------------')
 
 x=int(input('Enter an integer for x: ')) #promping the user for 3 integers 
 b =int(input('Enter the y-intercept "b", another integer: ')) #
-m =float(input('Enter the "m" rise over run: '))
+m =float(input('Enter the "m", rise over run: '))
 
 y = m * x + b # Here is where i cheat...
 
