@@ -68,7 +68,7 @@ avg_gas = average(my_list)
 print(f"{avg_gas} Is your average miles weekly") # if you know your weekly average of miles you can easily guestimate how much you are speding on gas 
 
 
-main()
+main() # 
 
 main
 
