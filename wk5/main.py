@@ -1,4 +1,5 @@
-import pyfiglet # i read to keep your imports in the same venv file 
+# program works well thanks to the intense while loop
+import pyfiglet 
 # or you can turn your python into "zombie python" which is criss crossed imports all over the local 
 
 
