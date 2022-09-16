@@ -29,7 +29,7 @@ print(ui_spaces)
 print(ui)
 
 print('{:<13}{:^20}{:<20} {:>10}'.format(
-        "PRICE PER PAPER", "COMMISSION", "FT WEEKLY SALARY","PT WEEKLY SALARY"))
+        "PRICE PER PAPER", "COMMISSION", "FT WEEKLY SALARY","PT WEEKLY SALARY")) # super easy to type 
 print(ui_spaces)
 print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$", ".25$", "20.00","10.00"))
 print(ui, '\n')
