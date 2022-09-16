@@ -1,5 +1,5 @@
 __course__ = 'CMIS-120'
-__name__ = 'Jason Preneveau'
+__name__ = 'Jason P&*%^*&au'
 __date__ = '28 June 2022'
 __version__ = '1.1.2'
 
