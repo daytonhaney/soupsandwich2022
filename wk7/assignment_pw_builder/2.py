@@ -1,4 +1,4 @@
-
+ # checking for digits and caps 
 def get_pass():
     while True:
         user_pw = input("Enter new password: ")
