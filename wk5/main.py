@@ -1,6 +1,5 @@
 import pyfiglet # i read to keep your imports in the same venv file 
-#or you can turn your python into "zombie python" which is criss crossed imports all over the local 
-#computer
+# or you can turn your python into "zombie python" which is criss crossed imports all over the local 
 
 
 def main():
@@ -49,11 +48,6 @@ while question != _EXITLOOP:
     break
 print("Thanks for commmng!") # I wanted to put the entire loop into the function but I did not have time to make the gloabl vaiables local to the function 
     
-              
-                   
-                
-   
-                
 
 
 
