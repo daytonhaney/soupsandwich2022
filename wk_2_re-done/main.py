@@ -18,7 +18,7 @@ print(ui_spaces)
 print(corp_center)
 print(paper_boy_center)
 
-data = []
+data = [] # not used 
 part_salery = (10)
 full_salary = (20)
 commission = (.25)
