@@ -7,11 +7,11 @@ print('\tWelcome to y=mx+b slope calculator\n \tEnter the values as Integers.')
 print('----------------------------------------------------------------------')
 
 x=int(input('Enter an integer for x: ')) #promping the user for 3 integers 
-
-
 b =int(input('Enter the y-intercept "b", another integer: ')) #
 m =float(input('Enter the "m" rise over run: '))
-y = m * x + b # Here is where i cheat 
+
+y = m * x + b # Here is where i cheat...
+
 def func( y = m*x+b): # the original slope formula from middle school
     return y and print(f"'You're Inputs: x={x}, m={m}, b={b}, and Slope = ",y)
    
