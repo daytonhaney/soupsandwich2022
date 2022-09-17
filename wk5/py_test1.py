@@ -29,15 +29,6 @@ while question != _EXITLOOP:
         break
     break
 print("Thanks for commmng!") # I wanted to put the entire loop into the function but I did not have time to make the gloabl vaiables local to the function 
-    
-              
-                   
-                
-   
-                
-
-
-
 def average(my_list): # I look the input questions and put them in a list so that i could create a bas average function to fun on it  and get the average restuls 
     average = sum(my_list) / len(my_list)
     return average
@@ -47,27 +38,3 @@ my_list = [question,monday,tuesday,thursday]
 
 avg_gas = average(my_list)
 print(f"{avg_gas} Is your average miles weekly") # if you know your weekly average of miles you can easily guestimate how much you are speding on gas 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#while question != exit:
-
-
-#   
-        
-    
-    
-        
