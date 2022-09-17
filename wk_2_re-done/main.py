@@ -1,3 +1,6 @@
+"""There is an error in the prompt_forP variable due to part time is suppossed =  10 and full time = 20...
+"""
+
 def intro():
     name = "Jason Pr349567789au\n"
     date = "Summer 2022\n"
