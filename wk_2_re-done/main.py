@@ -12,7 +12,7 @@ def intro():
 ui_spaces = " " # creating a user interface in the terminal is fun 
 
 corp = "This program will describe the pay schedule\nYou play as the paperboy determining his pay\n\n\n"
-paper_boy = "Welcome to Paper Boy 85'\n"
+paper_boy = "Welcome to Paper Boy 2099'\n"
 paper_boy_center = paper_boy.center(70)
 corp_center = corp.center(20) # center the title for a banner like User Interface
 ui = "= " * 40
