@@ -78,10 +78,6 @@ def print_final_message(service_type,service_price,total_price):
     print("\t\tTotal amount due for services--->", service_price,)
     print("\t\tFinal total--->", total_price)
     
-
-
-
-
 """
 trim = "trim shrubs"
 prune = 15
