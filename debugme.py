@@ -14,7 +14,7 @@ indoor_delux = [
 outdoor_services = [
     "Mowing",
     "Pruning",
-    "WeedWacking",
+    "WeedWacking", # can't spell but ....
     "Pressure Wash",
     float(200.00)
 ]
