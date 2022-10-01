@@ -14,7 +14,7 @@ indoor_delux = [
 outdoor_services = [
     "Mowing",
     "Pruning",
-    "WeedWacking", # can't spell but ....
+    "WeedWhacking", 
     "Pressure Wash",
     float(200.00)
 ]
@@ -139,7 +139,7 @@ def measurments(l, w):
     return square_footage
 
 
-def print_final_message(service_type, service_price, total_price):
+def print_final_message(service_type, service_price, total_price): # This function is the professors function
     print("\t\tThank you for choosing---> ", service_type)
     print("\t\tTotal amount due for services--->", service_price,)
     print("\t\tFinal total--->", total_price)
