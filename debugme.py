@@ -144,7 +144,7 @@ def print_final_message(service_type, service_price, total_price): # This functi
     print("\t\tTotal amount due for services--->", service_price,)
     print("\t\tFinal total--->", total_price)
 
-    return(service_price, service_price, total_price)
+    return service_price, service_price, total_price
 
 
 def main():
