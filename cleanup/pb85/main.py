@@ -32,7 +32,7 @@ print(ui, '\n')
 #return program_intro
 def your_schedule():
     prompt_ForP = intput("Are you full time or part time?\n")
-    if (prompt_ForP != "full time" or "Full time"): #if not full time then part time 
+    if (prompt_ForP != "full time" or "Full time" or "FULL TIME" or "Full Time"): #if not full time then part time 
         print("----------> ")
         print(f"{prompt_ForP} is 10 hours a week, Goal: 50 news-papers\n")
         data.append(prompt_ForP)
