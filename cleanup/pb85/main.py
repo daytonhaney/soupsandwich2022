@@ -1,5 +1,5 @@
 def intro():
-    name = "jay preneveay\n"
+    name = "jay pren\n"
     date = "2 oct 2022\n" 
     code_class = "cmis120\n"
     print(name,date,code_class)
