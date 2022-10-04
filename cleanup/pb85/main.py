@@ -1,11 +1,3 @@
-def intro():
-
-    name = "jay pren \n"
-    date = "2 oct 2022 \n" 
-    code_class = "cmis120 \n"
-    print(name,date,code_class)
-intro()
-
 # def program_intro():
 ui_spaces = " " # ui = user interface
 corp = "[This program will describe the pay for paperBoy 85]"
@@ -33,18 +25,20 @@ print(ui_spaces)
 print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$",".25","20.00","10.00")) 
 print(ui, '\n')
 # return program_intro
-def your_schedule(): # in progress 
-    prompt_ForP = intput("Are you full time or part time?\n")
-    if (prompt_ForP != "full time" or "Full time" or "FULL TIME" or "Full Time"): #if not full time then part time 
-        print("----------> ")
+def your_schedule():
+    prompt_ForP = input("Are you full time or part time?\n")
+
+    if (prompt_ForP == "part time" or "Part time" or "PART TIME" or "Part Time"): #if not full time then part time 
+        print(f"----------> {prompt_ForP} \n")
         print(f"{prompt_ForP} is 10 hours per week, Goal: 50 news-papers \n")
         data.append(prompt_ForP)
         page_pauser = input("Press ENTER to continue: \n")
-        amount_delivered = int(input("Number of news-papers delivered ------>  \n"))
+        amount_delivered = int(input("Number of news-papers delivered: "))
         total_commission = amount_delivered * commission
         big_total = part_salary + total_commission
         round_big_total = round(big_total,2)
         print(total_commission, f" is your commission, with {part_salary} your total salary \n")
+        print(round(total_commission + part_salary,2), "is your total cash take home for week ")
     else:
         (prompt_ForP == "full time" or "Full time" or "FULL TIME" or "Full Time") # full time here 
         print("----------> ")
@@ -59,4 +53,4 @@ def your_schedule(): # in progress
               
 def main():
     your_schedule()
-main()    # ..tbc 
+main()    # ..tbc  
