@@ -42,7 +42,7 @@ def your_schedule():
         big_total = part_salary + total_commission
         rount_big_total = round(big_total,2)
         print(total_commission,f" is your commission, with {part_salary} your total salary\n")
-    elif (prompt_ForP == "full time" or "Full time")# full time here 
+    else (prompt_ForP == "full time" or "Full time")# full time here 
         print({prompt_ForP}," ")
 # .. tbc       
       
