@@ -33,7 +33,7 @@ print(ui_spaces)
 print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$",".25","20.00","10.00")) 
 print(ui, '\n')
 # return program_intro
-def your_schedule():
+def your_schedule(): # in progress 
     prompt_ForP = intput("Are you full time or part time?\n")
     if (prompt_ForP != "full time" or "Full time" or "FULL TIME" or "Full Time"): #if not full time then part time 
         print("----------> ")
