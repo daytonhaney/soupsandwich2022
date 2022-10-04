@@ -1,3 +1,4 @@
 as of 04 oct 2022 
 
-![0ct_4_pb85_sofar](https://user-images.githubusercontent.com/37848207/193934968-2d24e338-8853-4c77-b335-1947c78aaee8.png)
+#### part time update 
+![part_time_fix](https://user-images.githubusercontent.com/37848207/193936968-8caa9d51-9c4a-4d89-abdd-4e50582defe1.png)
