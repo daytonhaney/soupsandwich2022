@@ -43,7 +43,7 @@ def your_schedule():
         big_total = part_salary + total_commission
         round_big_total = round(big_total,2)
         print(total_commission, f" is your commission, with {part_salary} your total salary \n")
-    else (prompt_ForP == "full time" or "Full time" or "FULL TIME" or "Full Time"): # full time here 
+    else: (prompt_ForP == "full time" or "Full time" or "FULL TIME" or "Full Time"): # full time here 
         print("----------> ")
         print(f"{prompt_ForP} is 20 hours per week, Goal: 100 news-papers \n")
         data.append(prompt_ForP)
