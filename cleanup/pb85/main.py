@@ -16,6 +16,7 @@ print(ui_spaces)
 print(corp_center)
 print(paper_boy_center)
 
+# vars in the global scope 
 data = []
 part_salary = int(10)
 full_salary = int(20)
@@ -34,15 +35,24 @@ def your_schedule():
     prompt_ForP = intput("Are you full time or part time?\n")
     if (prompt_ForP != "full time" or "Full time" or "FULL TIME" or "Full Time"): #if not full time then part time 
         print("----------> ")
-        print(f"{prompt_ForP} is 10 hours a week, Goal: 50 news-papers\n")
+        print(f"{prompt_ForP} is 10 hours per week, Goal: 50 news-papers \n")
         data.append(prompt_ForP)
-        page_pauser = intput("Press Enter to Continue\n")
-        amount_delivered = int(input("how many papers did you deliver ----> "))
+        page_pauser = input("Press ENTER to continue: \n")
+        amount_delivered = int(input("Number of news-papers delivered ------>  \n"))
         total_commission = amount_delivered * commission
         big_total = part_salary + total_commission
-        rount_big_total = round(big_total,2)
-        print(total_commission,f" is your commission, with {part_salary} your total salary\n")
-    else (prompt_ForP == "full time" or "Full time")# full time here 
-        print({prompt_ForP}," ")
+        round_big_total = round(big_total,2)
+        print(total_commission, f" is your commission, with {part_salary} your total salary \n")
+    else (prompt_ForP == "full time" or "Full time" or "FULL TIME" or "Full Time"): # full time here 
+        print("----------> ")
+        print(f"{prompt_ForP} is 20 hours per week, Goal: 100 news-papers \n")
+        data.append(prompt_ForP)
+        page_pauser = input("Press ENTER to continue: \n")
+        amount_delivered = int(input("Number of news-papers delivered? ------->  \n"))
+        total_commission = amount_delivered * commission
+        big_total = full_salary + total_commission
+        round_big_total = round(big_total,2)
+        print(total_commission, f" is your commission, with {full_salary} your total salary \n" )
+        
 # .. tbc       
       
