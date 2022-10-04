@@ -1,16 +1,18 @@
 def intro():
-    name = "jay pren\n"
-    date = "2 oct 2022\n" 
-    code_class = "cmis120\n"
+
+    name = "jay pren \n"
+    date = "2 oct 2022 \n" 
+    code_class = "cmis120 \n"
     print(name,date,code_class)
+intro()
 
 # def program_intro():
 ui_spaces = " " # ui = user interface
-corp = "This program will describe the pay for paperBoy 85'\n"
+corp = "[This program will describe the pay for paperBoy 85]"
 paper_boy = "Welcome To PaperBoy '85\n"
 paper_boy_center = paper_boy.center(70)
 corp_center = corp.center(20)
-ui = " = " * 40
+ui = "=" * 80
 
 print(ui_spaces)
 print(corp_center)
@@ -43,7 +45,7 @@ def your_schedule():
         big_total = part_salary + total_commission
         round_big_total = round(big_total,2)
         print(total_commission, f" is your commission, with {part_salary} your total salary \n")
-    else: 
+    else:
         (prompt_ForP == "full time" or "Full time" or "FULL TIME" or "Full Time") # full time here 
         print("----------> ")
         print(f"{prompt_ForP} is 20 hours per week, Goal: 100 news-papers \n")
@@ -56,6 +58,5 @@ def your_schedule():
         print(total_commission, f" is your commission, with {full_salary} your total salary \n" )
               
 def main():
-    intro()
     your_schedule()
 main()    # ..tbc 
