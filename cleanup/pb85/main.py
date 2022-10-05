@@ -22,7 +22,7 @@ print(ui_spaces)
 print(ui)
 print('{:<13}{:^20}{:^20}{:>10}'.format("PRICE PER PAPER","COMMISSION","FT WEEKLY SALARY","PT WEEKLY SALARY"))
 print(ui_spaces)
-print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$",".25","20.00","10.00")) 
+print('{:<10}{:^22}{:>15}{:>20}'.format("1.00$","$0.25","$100.00","$50.00")) 
 print(ui, '\n')
 # return program_intro
 def your_schedule():
@@ -30,7 +30,7 @@ def your_schedule():
 
     if (prompt_ForP == "part time" or "Part time" or "PART TIME" or "Part Time"): #if not full time then part time 
         print(f"----------> {prompt_ForP} \n")
-        print(f"{prompt_ForP} is 10 hours per week, Goal: 50 news-papers \n")
+        print(f"{prompt_ForP} is 10 hours per week, Goal: 150 news-papers \n")
         data.append(prompt_ForP)
         page_pauser = input("Press ENTER to continue: \n")
         amount_delivered = int(input("Number of news-papers delivered: "))
