@@ -1,7 +1,7 @@
 as of 04 oct 2022 
 
 #### part time update 
-![partTimeCont](https://user-images.githubusercontent.com/37848207/194054864-1778601f-96c6-4a7b-b123-8fb4e8ecfe8c.png)
+![2022-10-05_07-58](https://user-images.githubusercontent.com/37848207/194055272-e0872f56-fa68-4a13-b685-e20aec4a9648.png)
 
 
 
