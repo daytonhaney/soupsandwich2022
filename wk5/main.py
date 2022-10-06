@@ -1,11 +1,7 @@
-# program works well thanks to the intense while loop
+# under construction 
 import pyfiglet 
-# or you can turn your python into "zombie python" which is criss crossed imports all over the local 
-
 
 def main():
-    import pyfiglet # i read to keep your imports in the same venv file 
-    
     print("-- please adjust window width if banner looks messed up")    
     my_banner = pyfiglet.figlet_format("                   welcome") # pip3 import pyfiglet is a python3 command line utility to get colors and art in the terminal, where we run our programs. 
     print(my_banner) #adjust width if Banner is messed up
@@ -49,13 +45,9 @@ while question != _EXITLOOP:
     break
 print("Thanks for commmng!") # I wanted to put the entire loop into the function but I did not have time to make the gloabl vaiables local to the function 
     
-
-
-
 def average(my_list): # I look the input questions and put them in a list so that i could create a bas average function to fun on it  and get the average restuls 
     average = sum(my_list) / len(my_list)
     return average
-
 
 my_list = [question,monday,tuesday,thursday]
 
@@ -65,7 +57,7 @@ print(f"{avg_gas} Is your average miles weekly") # if you know your weekly avera
 
 main() # 
 
-main
+
 
 
 
