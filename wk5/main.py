@@ -8,8 +8,8 @@ def main():
       
     
     def my_introduction(name,my_class,date): #created a new greeting funcion
-        print(f"{name}\n{my_class}\n{date}") # f strings come in handy 
-    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022") # # #since function variables are returned as strings by  defauft 
+        print(f"{name}\n{my_class}\n{date}") 
+    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022") #since function variables are returned as strings by  defauft 
     # You can just call three strings like naae class and date
 main()
 
@@ -55,7 +55,7 @@ avg_gas = average(my_list)
 print(f"{avg_gas} Is your average miles weekly") # if you know your weekly average of miles you can easily guestimate how much you are speding on gas 
 
 
-main() # 
+main() # execution 
 
 
 
