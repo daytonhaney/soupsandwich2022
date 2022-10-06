@@ -1,7 +1,4 @@
-"""
-"""
-
-
+# under const
 
    reg_large = ('200USD')
     regular = [["Regular Services", "Bathrooms", "Trash", "Sweep/Vacuum"]]
