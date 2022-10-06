@@ -22,8 +22,9 @@ def lunar_calc(*earth_force, earth_mass) ->float :
 
 
 def main():
+    greeting
     query_user()
-   
+   fdskjfjksdfjksdbf sjdahfblwebitfbiudfsidyfbsdliufvsdaiytgil fvkjdsavuilqrwg e!!!!!!!!!
    
     
 main()
