@@ -44,7 +44,7 @@ def offer(*selection,**regular):
 def num_room(*x,**error):
     x = int(input("Enter number of rooms:    "))
     if x <=4 or x=4 :
-        print("4 rooms or less: Price: 200.00USD, Thank you for your business.")
+        print("4 rooms or less: Price: 100.00USD, Thank you for your business.")
     elif x >=5 and x<=6:
         print("Regular House Size: Price 150.00USD, Thank you for your buisness.")
     elif x > 7:
