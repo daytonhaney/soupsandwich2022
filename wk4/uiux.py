@@ -43,18 +43,18 @@ def offer(*selection,**regular):
         pass    
 def num_room(*x,**error):
     x = int(input("Enter number of rooms:    "))
-    if x <=4:
-        print("ok, you have less than 4 rooms\tPrice: 200.00USD")
+    if x <=4 or x=4 :
+        print("4 rooms or less: Price: 200.00USD, Thank you for your business.")
     elif x >=5 and x<=6:
-        print("regular medium price = 150USD, Thank you for your buisness. ")
+        print("Regular House Size: Price 150.00USD, Thank you for your buisness.")
     elif x > 7:
-        print("regular large price = 200USD, Thank you for your business")
+        print("Large House Size: Price 200.00USD, Thank you for your business.")
     else:
         return 
     
     def reg_model(model,regular):
         if regular:
-            return 'Thank youu' + model
+            return "Thank you" + model
       
 
 #def premium_model(*x,**y):
