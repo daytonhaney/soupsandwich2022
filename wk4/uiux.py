@@ -65,7 +65,7 @@ def num_room(*x,**error):
 
 
 def main():
-    ui()
+   # ui()
     offer()
     num_room()
 main()
