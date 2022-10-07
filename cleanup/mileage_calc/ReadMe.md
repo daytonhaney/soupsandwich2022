@@ -1,7 +1,1 @@
-
-![mileage_calc](https://user-images.githubusercontent.com/37848207/194453146-d6987134-8e3b-4d32-a070-5200b4d458aa.png)
-
-
-
-
-### loop and app feedback still needs editing
+![updated](https://user-images.githubusercontent.com/37848207/194455034-a3fe3c73-ab6d-49a4-8714-5a03d630d938.png)
