@@ -4,4 +4,4 @@
 
 
 
-### loop needs editing 
+### loop and app feedback still needs editing
