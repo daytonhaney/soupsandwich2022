@@ -1,1 +1,1 @@
-![2022-10-06_22-16](https://user-images.githubusercontent.com/37848207/194452811-07989c7a-0565-4706-b67f-0c15182b7e4e.png)
+![mileage_calc](https://user-images.githubusercontent.com/37848207/194453146-d6987134-8e3b-4d32-a070-5200b4d458aa.png)
