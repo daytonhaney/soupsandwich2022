@@ -43,7 +43,7 @@ while question != _EXITLOOP:
         break
     break
  
-def average(my_list): # I look the input questions and put them in a list so that i could create a bas average function to fun on it  and get the average restuls 
+def average(my_list):
     average = sum(my_list) / len(my_list)
     return average
 
