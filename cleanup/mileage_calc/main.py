@@ -1,51 +1,49 @@
 
-import pyfiglet
- 
 def main():
     import pyfiglet
     
     print("-- please adjust window width if banner looks messed up")    
-    my_banner = pyfiglet.figlet_format("                   welcome")
-    print(my_banner)
+    my_banner = pyfiglet.figlet_format("                   welcome") 
+    print(my_banner) 
       
     
     def my_introduction(name,my_class,date):
         print(f"{name}\n{my_class}\n{date}")
-    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022 (updated 06 Oct 2022)") 
+    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022 (updated 06 Oct 2022)")
 main()
 
-_EXITLOOP = -99  
-question = int(input("Number of miles driven on Monday:\n "))
+
+_EXITLOOP = -99   
+question = int(input("Number of miles driven on Monday: "))
 
 while question != _EXITLOOP:
     monday = question
-    print(f"You drove {question} miles on Monday.")
+    print(f"\n----------> You drove {question} miles on Monday.")
     
-    monday = int(input("Number of miles driven on Tuesday:\n "))
-    print(f"You drove {monday} miles on Tuesday.")
+    monday = int(input("\nNumber of miles driven on Tuesday: "))
+    print(f"\n----------> You drove {monday} miles on Tuesday.")
     
     while question != _EXITLOOP :
         tuesday = question
-        tuesday = int(input("Number of miles driven on Wednesday:\n "))
-        print(f"You drove {tuesday} miles on Wednesday.")
+        tuesday = int(input("\nNumber of miles driven on Wednesday: "))
+        print(f"\n----------> You drove {tuesday} miles on Wednesday.")
         
         while question!=_EXITLOOP:
             wednesday = question
-            wednesday = int(input("Number of miles driven on Thursday:\n "))
-            print(f"You drove {wednesday} miles on Thursday.")
+            wednesday = int(input("\nNumber of miles driven on Thursday: "))
+            print(f"\n----------> You drove {wednesday} miles on Thursday.")
             while question !=_EXITLOOP:
                 thursday = question
-                thursday = int(input("Number of miles driven on Friday:\n "))
-                print(f"You drove {thursday} miles on Friday.")
-                while True: 
+                thursday = int(input("\nNumber of miles driven on Friday: "))
+                print(f"\n----------> You drove {thursday} miles on Friday.\n")
+                while True: # I could not ggte program to stop looping so I came up with this 
                     break
                 break
             break
         break
     break
-
-    
-def average(my_list):
+ 
+def average(my_list): # I look the input questions and put them in a list so that i could create a bas average function to fun on it  and get the average restuls 
     average = sum(my_list) / len(my_list)
     return average
 
@@ -53,10 +51,7 @@ def average(my_list):
 my_list = [question,monday,tuesday,wednesday,thursday]
 
 avg_gas = average(my_list)
-print(f"{avg_gas} Is your average number of miles this week.\n Come back soon.")
-
-
-
+print(f"{avg_gas} Is your average number of miles this week.\n\n\n Come again soon.") 
 
 
 
