@@ -1,6 +1,6 @@
-# 
-import pyfiglet 
-# or you can turn your python into "zombie python" which is criss crossed imports all over the local 
+
+import pyfiglet # pip install pyfiglet & virtualenv. $ source bin/activate 
+ 
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     
     def my_introduction(name,my_class,date): #created a new greeting funcion
         print(f"{name}\n{my_class}\n{date}") # f strings come in handy 
-    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022") # # #since function variables are returned as strings by  defauft 
+    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022 (updated 06 Oct 2022)") # # #since function variables are returned as strings by  defauft 
     # You can just call three strings like naae class and date
 main()
 
@@ -26,28 +26,28 @@ while question != _EXITLOOP:
     print(f"You drove {question} miles on Monday.")
     
     monday = int(input("Number of miles driven on Tuesday:\n "))
-    print(f"You drove {question} miles on Tuesday.")
+    print(f"You drove {monday} miles on Tuesday.")
     
     while question != _EXITLOOP :
         tuesday = question
         tuesday = int(input("Number of miles driven on Wednesday:\n "))
-        print(f"You drove {question} miles on Wednesday.")
+        print(f"You drove {tuesday} miles on Wednesday.")
         
         while question!=_EXITLOOP:
             wednesday = question
             wednesday = int(input("Number of miles driven on Thursday:\n "))
-            print(f"You drove {question} miles on Thursday.")
+            print(f"You drove {wednesday} miles on Thursday.")
             while question !=_EXITLOOP:
                 thursday = question
                 thursday = int(input("Number of miles driven on Friday:\n "))
-                print(f"You drove {question} miles on Friday.")
+                print(f"You drove {thursday} miles on Friday.")
                 while True: # I could not ggte program to stop looping so I came up with this 
                     break
                 break
             break
         break
     break
-print("Thanks for commmng!") # I wanted to put the entire loop into the function but I did not have time to make the gloabl vaiables local to the function 
+print("Thanks for comming!") # I wanted to put the entire loop into the function but I did not have time to make the gloabl vaiables local to the function 
     
 
 
@@ -60,12 +60,15 @@ def average(my_list): # I look the input questions and put them in a list so tha
 my_list = [question,monday,tuesday,thursday]
 
 avg_gas = average(my_list)
-print(f"{avg_gas} Is your average miles weekly") # if you know your weekly average of miles you can easily guestimate how much you are speding on gas 
+print(f"{avg_gas} Is your average number of miles this week") # if you know your weekly average of miles you can easily guestimate how much you are speding on gas 
 
 
-main() # 
+#main() # 
 
-main
+
+
+
+
 
 
 
