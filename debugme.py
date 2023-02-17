@@ -1,24 +1,33 @@
- """ Still Work to be done """
+""" Still Work to be done """
 from time import sleep
 
-indoor_delux = [
-    "Regular Services + ",
-    "Bathrooms",
-    "Bedrooms",
-    "Discount",
-    "Senior Discount",
-    float(200.00)
-   
+
+auditor = []
+price_per_square_foot = float(2.00)
+one = regular = [
+    "General Tidying",
+    "Sweep",
+    "Dust",
+    "Mop",
 
 ]
-outdoor_services = [
+print(one)
+two = premium = [
+    "Regular Services + ",
+    "Bathrooms",
+    "Closets",
+    "Discount",
+    "Senior Discount",
+
+
+
+]
+three = outdoor = [
     "Mowing",
     "Pruning",
-    "WeedWhacking", 
+    "WeedWhacking",
     "Pressure Wash",
-    float(200.00)
 ]
-TOTAL_BUSINESS_SERVICES = indoor_regular, indoor_delux, outdoor_services
 
 
 def my_greeting():
@@ -75,7 +84,7 @@ def user_interface():
     print(lines)
     print(lines)
     print(sp)
-    return(user_interface)
+    return (user_interface)
 
 
 def new_customer():
@@ -85,9 +94,9 @@ def new_customer():
 
     new_customer_name = input("Enter Name:     ")
     auditor.append(new_customer_name)
+    print(f"\nWelcome, {new_customer_name}!")
 
-    print(f"Welcome to In and Out Cleaners, {new_customer_name}")
-    print("-===-")
+    print("*"*78)
     if new_customer_name.isdigit():
         print("ERROR: Pleas try again, Enter Name")
     else:
@@ -108,56 +117,56 @@ def new_customer():
         sleep(1.5)
         print(" ")
         sleep(1.5)
-        return new_customer_name, auditor, validator
+        return new_customer_name, auditor
 
 
 def customer_transaction():
     """ This function will determine what the customer whats as a service and then gather the details which lead to payment """
 
-    auditor = []
-    indoor_regular = [
-        "Dust",
-        "Sweep",
-        "Vacuum",
-        "General Tidying",
-        "Senior Discount",
-        float(100.00)
+    customer_auditor = []
+    sleep(1)
+    service_selection = input(
+        "Prepare for selection:\nType 'one' --> Regular\nType 'two' --> Premium\nType 'three' --> Outdoor\n")
+    if service_selection == 'one':
+        print(f"You chose {regular}")
+    elif service_selection == 'two':
+        print(f"You chose {premium}")
+    elif service_selection == 'three':
+        print(f"You chose {outdoor}")
+    elif service_selection != 'one' or 'two' or 'three':
+        print("You must make a selection")
 
-    ]
-
-    for x in indoor_regular:
-        print(x)
-    service_order = (input("Press 1 ".format(TOTAL_BUSINESS_SERVICES)))
-    print(TOTAL_BUSINESS_SERVICES)
-
-    auditor.append(service_order)
-    return service_order, auditor
+    print("Get ready for price".center(40))
+    return service_selection
 
 
 def measurments(l, w):
+    l = input("Enter length")
+    w = input("Enter width")
+
     square_footage = int(l) * int(w)
-    return square_footage
+    print(square_footage)
+    total_price = price_per_square_foot * square_footage
+
+    return total_price
 
 
-def print_final_message(service_type, service_price, total_price): # This function is the professors function
-    print("\t\tThank you for choosing---> ", service_type)
-    print("\t\tTotal amount due for services--->", service_price,)
-    print("\t\tFinal total--->", total_price)
+# This function is the professors function
+def print_final_message(service_selection, total_price):
+    print("\t\tThank you for choosing---> ", service_selection)
+    print("\t\tTotal amount due for services--->", total_price,)
 
-    return service_price, service_price, total_price
+    return service_selection, total_price
 
 
 def main():
     auditor = []
-    customer_choice = []
-    customer_names = []
-    customer_prices = []
-
     my_greeting()
     user_interface()
 
     new_customer_name = new_customer()
     customer_transaction()
+    measurments(1, w)
 
 
 main()
