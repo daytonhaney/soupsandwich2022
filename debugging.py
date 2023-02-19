@@ -1,11 +1,38 @@
-def getArea(l, w):
-    area = l * w
-    print(f"Area is {area}")
-    price_per_square = float(2.00)
-    total_price = area * price_per_square
-    print(total_price)
+def userfunctions():
 
-    return total_price, area, price_per_square
+    regular = [
+        "General Tidying",
+        "Sweep",
+        "Dust",
+        "Mop",
+
+    ]
+    premium = [
+        "Regular Services + ",
+        "Bathrooms",
+        "Closets",
+        "Discount",
+        "Senior Discount",
 
 
-total_price = getArea(15, 3)
+    ]
+    outdoor = [
+        "Mowing ",
+        "Pruning",
+        "WeedWhacking",
+        "Pressure Wash",
+    ]
+
+    total_services = {
+        "regular": ["General tidying", "Sweep", "Dust", "Mop"],
+        "premuim": ["Regular Service", "Bathroom", "Closets", "Discount", "Senior Discount"],
+        "outdoor": ["Mowing", "Pruning", "Weed-Whacking", "Senior-Discount"]
+
+    }
+
+    print(total_services.keys)
+    for _ in total_services:
+        print(_)
+
+
+userfunctions()
