@@ -1,6 +1,16 @@
-def welcome():
-    greeter = "welcome to my wholesale division"
-    print(greeter.center(60))
+a = 50
+print(a)
 
-welcome()
 
+def main():
+    print("I doubt this program will ever work")
+
+main()
+
+my_subjects = ['rats','mice','dogs']
+
+print(input("Do u have any lab expirience?"))
+
+
+
+print(input, "Yeah, a little")

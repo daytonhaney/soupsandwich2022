@@ -51,9 +51,7 @@ def average(my_list):
 my_list = [question,monday,tuesday,wednesday,thursday]
 
 avg_gas = average(my_list)
-print(f"{avg_gas} Is your average number of miles this week.\n\n\n Come again soon.") 
-
-
+print(f"{avg_gas} Is your average number of miles this week.")
 
 
 

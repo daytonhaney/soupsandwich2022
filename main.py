@@ -1,6 +1,9 @@
-from time import sleep  # Rather than prompting to display the model we slowly can print the model
+# Rather than prompting to display the model we slowly can print the model
+from time import sleep
 
 # Main Greeting Function Different This week, could be used as a title
+
+
 def my_greeting():
     """This prgram will present a customer with a business model.
         The customer(user) will have the opportunity to chooose
@@ -11,8 +14,9 @@ def my_greeting():
         # about _, like placeholder
         opening_hint = "*** Please adjust screen to wide for best picture ***\n\n\n"
 
-        print(_)
+    print(_)
     print(opening_hint.center(80))
+
 
 def user_interface():
     """ This function is the customer display model/ UI for customer Interaction which will be deployed to the Job site manager
@@ -58,11 +62,13 @@ def user_interface():
     print(sp)  # and spaces
     return user_interface
 
+
 def new_customer(name):
     """ Function that prints the services which are in lists and in the function we ask for the name and pass it
     through an exception making sure name  =! an integer """
 
     auditor = []  # storing the user name in a list call auditor
+
     indoor_regular_services = [  # (trying )keeping vars out of the global scope ...
         "Dusting",
         "Sweep/Mop",
@@ -84,18 +90,19 @@ def new_customer(name):
         "Pressure-Wash",
     ]
     try:  #
-        name = input("Please Enter Name ENTER to continue: ".center(50))
+        name = input("Please Enter Name ENTER to continue: \n".center(50))
         name == int(name)
     except Exception:
         name
 
-
     finally:  # if there is an error in the above code finally will keep the python runtime going to avoid crashes and system outages
-        print("We Offer Several Cleaning Packages".center(50))
+        print(
+            f"Welcome {name}, \nWe Offer Several Cleaning Packages \n".center(50))
     sleep(1.5)  # Not much logic proved  other than for than customer readability
 
     print("-------> Inside Regular Cleaning".center(50))
-    for _ in list(indoor_regular_services):  # using _ as the variable to print the services which are lists...
+    # using _ as the variable to print the services which are lists...
+    for _ in list(indoor_regular_services):
         print(_.center(50), end="\n")  # _ can be used as a throwaway variable
     sleep(1.5)
     print(" ")  # Had to add for code and program readability
@@ -104,13 +111,13 @@ def new_customer(name):
     for _ in indoor_deluxe:  # Using _ as a throw away only to print the selections
         # (indoor regular and deluxe, and outdoor services)
         print(_.center(50), end="\n")
-    sleep(2)
+    sleep(1.5)
     print(" ")
 
     print("-------> Outdoor Services".center(50))
     for _ in outdoor_services:
         print(_.center(50), end="\n")
-    sleep(2)
+    sleep(1.5)
     print(" ")
 
     print("Prepare for customer selection:".center(50))
@@ -119,31 +126,43 @@ def new_customer(name):
 
 def getter(get_price):
     des = {
-        1 :"250.00",
-            }
+        1: "250.00",
+    }
     get_price = input("")
+
+
 def measurments(l, w):
-    """This function asks for the values of house size used to compute the prices"""
     square_footage = int(l) * int(w)
-    a = input("Enter Length for side of house for example\n ' 30 ' if side is 30feet".center(50))
-    b = input("Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
-    return square_footage,a,b
+    a = input(
+        "Enter Length for side of house for example\n ' 30 ' if side is 30feet".center(50))
+    b = input(
+        "Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
+    return square_footage, a, b
+
+
 def print_final_message(service_type, service_price, total_price):
     """ This function is the professors function.. I planned on modeling my program to work so that I could finish the program
     by using the professors code....It is nice code. It keeps a lot of data in one function and it is easy to read
     Until not I have no copied the professors code. 
     """
-    # This is the professors code , the one code snippet that I used 
-    print("\t\tThank you for choosing---> ", service_type) # 
+    # This is the professors code , the one code snippet that I used
+    print("\t\tThank you for choosing---> ", service_type)
     print("\t\tTotal amount due for services--->", service_price)
     print("\t\tFinal total--->", total_price)
 
     return service_type, service_price, total_price
+
+
 def main():
     my_greeting()
     user_interface()
-    name, auditor, outdoor_services, indoor_regular_services, indoor_deluxe = new_customer("name")
+    name, auditor, outdoor_services, indoor_regular_services, indoor_deluxe = new_customer(
+        "name")
     auditor.append(new_customer(name))
+    measurments(2, 3)
+    print(auditor)
     getter(1)
-    #measurments(a,b)
+
+
+    # measurments(a,b)
 main()
