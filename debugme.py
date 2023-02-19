@@ -90,7 +90,7 @@ def user_interface():
     print(lines)
     print(lines)
     print(sp)
-    return (user_interface)
+    return user_interface
 
 
 def new_customer():
@@ -168,9 +168,9 @@ def area_of_house():
     l = float(input("Enter length: "))
     w = float(input("Enter width: "))
     area = l * w
-    print(area)
+    print(f"Area = {area}")
     total_price = price_per_square_foot * area
-    print(total_price)
+    print(f"Toal prce = {total_price}")
 
 
 # This function is the professors function
@@ -182,13 +182,13 @@ def print_final_message(service_selection, total_services, total_price):
 
 
 def main():
-    auditor = []
+    data = auditor
     my_greeting()
     user_interface()
-    new_customer_name = new_customer()
-    area_of_house()
+    customer_transaction()
+    new_customer_name = area_of_house()
 
-    print_final_message(service_selection, total_services, total_price)
+   # print_final_message(service_selection, total_services, total_price)
 
 
 main()
