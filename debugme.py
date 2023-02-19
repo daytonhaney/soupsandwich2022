@@ -3,7 +3,7 @@ from time import sleep
 
 
 auditor = []
-price_per_square_foot = float(2.00)
+price_per_square_foot = float(5.00)
 regular = [
     "General Tidying",
     "Sweep",
@@ -17,7 +17,6 @@ premium = [
     "Closets",
     "Discount",
     "Senior Discount",
-
 
 
 ]
@@ -67,13 +66,13 @@ def user_interface():
     print(lines)
     print(lines)
 
-    regular = "Cleaning: Regular Services and Premium Services offered: \n\n"
+    regular = " Regular Service - Premium Service - Outdoor Service \n\n"
 
     print('')
     print(regular.center(80))
     print(sp)  # old code but I like how it looks
     print("\t\tRegular  \t\t\tPremium")
-    print(" \t\tGeneral Tidying  \t\tIncludes Bed / Bath +\n\t\t Dust Mop Sweep  \t\t\tClosets\n\t\t\t  \n\t\t\t   \t\t\t*1/2 Price Next Visit")
+    print(" \t\t -General Tidying  \t\t -Includes Bed / Bath +\n\t\t -Dust Mop Sweep  \t\t -Closets\t\t\t  \n\t\t\t   \t\t\t -1/2 Price Next Visit")
     print(sp)
     print(sp)
     print("\t\tOutdoor "  # qqqqq
@@ -83,9 +82,9 @@ def user_interface():
           "\t\t-Pruning \n"
           "\t\t-Weed-Wacking \n"
           "\t\t-Pressure Wash \n"
-          "\t\t-$100.00 \n"
-          "\t\t *** $200.00 if combined with inside cleaning ***\n\n\n\n"
-          "\t\t $$$ Price = Sqft, Length x Width of house. $$$ ")
+          "\t\t-$100.00 \n\n  "
+          "\t\t $$$ Price = Sqft, Length x Width of house. $$$"
+          )
 
     print(lines)
     print(lines)
@@ -102,25 +101,27 @@ def new_customer():
     new_customer_name = input("Enter Name: ")
     auditor.append(new_customer_name)
     print(auditor)
-    print((f"\nWelcome, {new_customer_name}!"))
+    print((f"Welcome, {new_customer_name}!"))
 
     print("*"*78)
+
     if new_customer_name.isdigit():
         print("ERROR: Pleas try again, Enter Name")
     else:
         print(f"{new_customer_name},")
-        validator = True
-        while validator and new_customer_name.isdigit() == True:
-            print("--We offer Several packages...")
+
+        while new_customer_name.isdigit() != True:
+            print("We offer Several packages...")
             sleep(1.5)
 
-            print("--Inside Regular Cleaning...", regular)
+            print("Inside Regular Cleaning --", regular)
             sleep(1.5)
-            print("--Inside Delux Clearning..")
+            print("Inside Delux Clearning --", premium)
             sleep(1.5)
-            print("--And Outdoor Services")
+            print("Outdoor Services --", outdoor)
             sleep(1.5)
             print(" ")
+            break
         print("*Prepare for selection ".center(24))
         sleep(1.5)
         print(" ")
@@ -139,14 +140,17 @@ def customer_transaction():
     if service_selection == 1:
         # service_selection = regular
         print(f"You chose  {regular}")
+        service_selection = regular
 
     else:
         if service_selection == 2:
             print(f"You chose {premium}")
+            service_selection = premium
 
         else:
             if service_selection == 3:
                 print(f"You chose {outdoor}")
+                service_selection = outdoor
 
             else:
                 if service_selection != 1 or 2 or 3:
@@ -159,19 +163,18 @@ def customer_transaction():
     return service_selection, auditor
 
 
-def measurments(l, w):
-    l = input("Enter length")
-    w = input("Enter width")
+def area_of_house():
 
-    square_footage = int(l) * int(w)
-    print(square_footage)
-    total_price = price_per_square_foot * square_footage
-
-    return total_price
+    l = float(input("Enter length: "))
+    w = float(input("Enter width: "))
+    area = l * w
+    print(area)
+    total_price = price_per_square_foot * area
+    print(total_price)
 
 
 # This function is the professors function
-def print_final_message(service_selection, total_price):
+def print_final_message(service_selection, total_services, total_price):
     print("\t\tThank you for choosing---> ", service_selection)
     print("\t\tTotal amount due for services--->", total_price,)
 
@@ -182,11 +185,10 @@ def main():
     auditor = []
     my_greeting()
     user_interface()
-
     new_customer_name = new_customer()
-    customer_transaction()
-    measurments(1, w)
-    print_final_message()
+    area_of_house()
+
+    print_final_message(service_selection, total_services, total_price)
 
 
 main()
