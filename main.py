@@ -129,9 +129,7 @@ def measurments(l, w):
     b = input("Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
     return square_footage,a,b
 def print_final_message(service_type, service_price, total_price):
-    """ This function is the professors function.. I planned on modeling my program to work so that I could finish the program
-    by using the professors code....It is nice code. It keeps a lot of data in one function and it is easy to read
-    Until not I have no copied the professors code. 
+    """ This function is the professors function.
     """
     # This is the professors code , the one code snippet that I used 
     print("\t\tThank you for choosing---> ", service_type) # 
