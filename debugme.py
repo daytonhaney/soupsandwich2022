@@ -4,15 +4,14 @@ from time import sleep
 
 auditor = []
 price_per_square_foot = float(2.00)
-one = regular = [
+regular = [
     "General Tidying",
     "Sweep",
     "Dust",
     "Mop",
 
 ]
-print(one)
-two = premium = [
+premium = [
     "Regular Services + ",
     "Bathrooms",
     "Closets",
@@ -22,12 +21,20 @@ two = premium = [
 
 
 ]
-three = outdoor = [
+outdoor = [
     "Mowing",
     "Pruning",
     "WeedWhacking",
     "Pressure Wash",
 ]
+
+
+total_services = {
+    "regular": ["General tidying", "Sweep", "Dust", "Mop"],
+    "premuim": ["Regular Service", "Bathroom", "Closets", "Discount", "Senior Discount"],
+    "outdoor": ["Mowing", "Pruning", "Weed-Whacking", "Senior-Discount"]
+
+}
 
 
 def my_greeting():
@@ -92,9 +99,10 @@ def new_customer():
     """ Function also validates for spam and if valid, proceeds to main  """
     auditor = []
 
-    new_customer_name = input("Enter Name:     ")
+    new_customer_name = input("Enter Name: ")
     auditor.append(new_customer_name)
-    print(f"\nWelcome, {new_customer_name}!")
+    print(auditor)
+    print((f"\nWelcome, {new_customer_name}!"))
 
     print("*"*78)
     if new_customer_name.isdigit():
@@ -106,7 +114,7 @@ def new_customer():
             print("--We offer Several packages...")
             sleep(1.5)
 
-            print("--Inside Regular Cleaning...")
+            print("--Inside Regular Cleaning...", regular)
             sleep(1.5)
             print("--Inside Delux Clearning..")
             sleep(1.5)
@@ -123,21 +131,32 @@ def new_customer():
 def customer_transaction():
     """ This function will determine what the customer whats as a service and then gather the details which lead to payment """
 
-    customer_auditor = []
+    selection_auditor = []
     sleep(1)
-    service_selection = input(
-        "Prepare for selection:\nType 'one' --> Regular\nType 'two' --> Premium\nType 'three' --> Outdoor\n")
-    if service_selection == 'one':
-        print(f"You chose {regular}")
-    elif service_selection == 'two':
-        print(f"You chose {premium}")
-    elif service_selection == 'three':
-        print(f"You chose {outdoor}")
-    elif service_selection != 'one' or 'two' or 'three':
-        print("You must make a selection")
+    service_selection = int(input(
+        "Prepare for selection:\nPress 1 --> Regular\nType 2 --> Premium\nType 3 --> Outdoor\n"))
 
+    if service_selection == 1:
+        # service_selection = regular
+        print(f"You chose  {regular}")
+
+    else:
+        if service_selection == 2:
+            print(f"You chose {premium}")
+
+        else:
+            if service_selection == 3:
+                print(f"You chose {outdoor}")
+
+            else:
+                if service_selection != 1 or 2 or 3:
+                    customer_transaction()
+
+            print("You must make a selection")
+    auditor.append(service_selection)
+    print(selection_auditor, auditor)
     print("Get ready for price".center(40))
-    return service_selection
+    return service_selection, auditor
 
 
 def measurments(l, w):
@@ -167,6 +186,7 @@ def main():
     new_customer_name = new_customer()
     customer_transaction()
     measurments(1, w)
+    print_final_message()
 
 
 main()
