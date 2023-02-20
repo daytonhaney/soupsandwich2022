@@ -1,5 +1,7 @@
 """ Still Work to be done """
 from time import sleep
+import colorama
+from colorama import Fore, Style
 
 
 auditor = []
@@ -35,19 +37,15 @@ total_services = [
 
 
 def my_greeting():
-    """This prgram will present a customer with a business model.
+    # about _, like placeholder
+    opening_hint = \
+        "*** Please adjust screen to wide for best picture ***\n\n\n "
 
-        The customer(user) will have the opportunity to chooose
-        between several different Cleaning Packages.
-sJ
-    """
     my_name, my_date, my_class = "Jason Pr*&%785au", "9 July 2022", "CMIS-120\n\n\n"
     for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
         # about _, like placeholder
-        opening_hint = "*** Please adjust screen to wide for best picture ***\n\n\n"
-
         print(_)
-    print(opening_hint.center(80))
+    print(opening_hint.center(90))
 
 
 def user_interface():
@@ -63,10 +61,10 @@ def user_interface():
     print(lines)
     print(lines)
 
-    regular = " Regular Service - Premium Service - Outdoor Service \n\n"
+    regular = "Regular Service - Premium Service - Outdoor Service \n\n"
 
     print('')
-    print(regular.center(80))
+    print(regular.center(80), end='')
     print(sp)  # old code but I like how it looks
     print("\t\tRegular  \t\t\tPremium")
     print(" \t\t -General Tidying  \t\t -Includes Bed / Bath +\n\t\t -Dust Mop Sweep  \t\t -Closets\t\t\t  \n\t\t\t   \t\t\t -1/2 Price Next Visit")
@@ -90,19 +88,9 @@ def user_interface():
     return user_interface
 
 
-def show_offering(showreg, showprem, showoutdoor):
-    for showreg in regular:
-        print(showreg)
-    for showprem in premium:
-        print(showprem)
-    for showoutdoor in outdoor:
-        print(showoutdoor)
-
-
 def new_customer():
     """ This function gets the customers name and puts it into the auditor for records  and also returns customer name to main  """
-    """ Function also validates for spam and if valid, proceeds to main  """
-    auditor = []
+    """ Function also validates for spam and if validproceeds to main  """
 
     new_customer_name = input("Enter Name: ")
     auditor.append(new_customer_name)
@@ -118,14 +106,14 @@ def new_customer():
 
         while new_customer_name.isdigit() != True:
             print("We offer Several packages...")
-            sleep(1.5)
+            sleep(.5)
 
-            print("Inside Regular Cleaning --", regular)
-            sleep(1.5)
-            print("Inside Delux Clearning --", premium)
-            sleep(1.5)
-            print("Outdoor Services --", outdoor)
-            sleep(1.5)
+            print("Inside Regular Cleaning -------->", regular)
+            sleep(.5)
+            print("Inside Delux Clearning --------->", premium)
+            sleep(.5)
+            print("Outdoor Services --------------->", outdoor)
+            sleep(.5)
             print(" ")
             break
         print("*Prepare for selection ".center(24))
@@ -135,36 +123,43 @@ def new_customer():
         return new_customer_name, auditor
 
 
+def show_offering(total_services):
+
+    menu_lines = colorama.ansi
+    for total_services in regular, premium, outdoor:
+        print(total_services)
+        print(menu_lines)
+        sleep(0.5)
+
+
 def customer_transaction():
     """ This function will determine what the customer whats as a service and then gather the details which lead to payment """
 
     selection_auditor = []
     sleep(1)
     service_selection = int(input(
-        "Prepare for selection:\nPress 1 --> Regular\nType 2 --> Premium\nType 3 --> Outdoor\n"))
+        "Prepare for selection:\nPress ----- [1] ----------> Regular\nPress ----- [2] ----------> Premium\nPress ----- [3] ----------> Outdoor\n"))
 
     if service_selection == 1:
         # service_selection = regular
         print(f"You chose  {regular}")
         service_selection = regular
 
+    elif service_selection is 2:
+        print(f"You chose {premium}")
+        service_selection = premium
+    elif service_selection == 3:
+        print(f"You chose {outdoor}")
+        service_selection = outdoor
+
     else:
-        if service_selection == 2:
-            print(f"You chose {premium}")
-            service_selection = premium
 
-        else:
-            if service_selection == 3:
-                print(f"You chose {outdoor}")
-                service_selection = outdoor
-
-            else:
-                if service_selection != 1 or 2 or 3:
-                    customer_transaction()
+        if service_selection != int(1) or int(2) or int(3):
 
             print("You must make a selection")
+            print("Enter 1 2 or 3 ")
+            customer_transaction()
     auditor.append(service_selection)
-    print(selection_auditor, auditor)
     print("Get ready for price".center(40))
     return service_selection, auditor
 
@@ -209,9 +204,11 @@ def main():
     data = auditor
     my_greeting()
     user_interface()
-    show_offering(showreg=regular, showprem=premium, showoutdoor=outdoor)
+    new_customer()
+    show_offering(total_services)
+
     customer_transaction()
     new_customer_name = area_of_house()
 
    # print_final_message(service_selection, total_services, total_price
-   main()
+main()
