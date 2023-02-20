@@ -135,7 +135,6 @@ def new_customer():
         return new_customer_name, auditor
 
 
-<<<<<<< HEAD
 def customer_transaction():
     """ This function will determine what the customer whats as a service and then gather the details which lead to payment """
 
@@ -180,33 +179,31 @@ def area_of_house():
     print(f"Toal prce = {total_price}")
 
 
-# This function is the professors function
-def print_final_message(service_selection, total_services, total_price):
-    print("\t\tThank you for choosing---> ", service_selection)
-    print("\t\tTotal amount due for services--->", total_price,)
-
-    return service_selection, total_price, total_services
-
-=======
 def getter(get_price):
     des = {
-        1 :"250.00",
-            }
+        1: "250.00",
+    }
     get_price = input("")
+
+
 def measurments(l, w):
     """This function asks for the values of house size used to compute the prices"""
     square_footage = int(l) * int(w)
-    a = input("Enter Length for side of house for example\n ' 30 ' if side is 30feet".center(50))
-    b = input("Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
-    return square_footage,a,b
+    a = input(
+        "Enter Length for side of house for example\n ' 30 ' if side is 30feet".center(50))
+    b = input(
+        "Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
+    return square_footage, a, b
+
+
 def print_final_message(service_type, service_price, total_price):
     """ This function is the professors function.
     """
-    # This is the professors code , the one code snippet that I used 
-    print("\t\tThank you for choosing---> ", service_type) # 
+    # This is the professors code , the one code snippet that I used
+    print("\t\tThank you for choosing---> ", service_type)
     print("\t\tTotal amount due for services--->", service_price)
     print("\t\tFinal total--->", total_price)
->>>>>>> dd877228f86ee3a04374495533753da5c7ebaf5f
+
 
 def main():
     data = auditor
@@ -216,7 +213,5 @@ def main():
     customer_transaction()
     new_customer_name = area_of_house()
 
-   # print_final_message(service_selection, total_services, total_price)
-
-
-main()
+   # print_final_message(service_selection, total_services, total_price
+   main()
