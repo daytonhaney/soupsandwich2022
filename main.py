@@ -3,13 +3,13 @@ from time import sleep
 import pyfiglet
 
 auditor = []
-price_per_square_foot = float(.50)
 
 total_services = {
-        "Regular" : "General\nTidying\nSweep\nDust\nMop",
-        "Premium" :"Regular Service + \nBathroom\nCloset\nSenior\nDiscount",
-        "Outdoor": "Mowing\nPruning\nWeedWhacking\nSenior\nDiscount"
-    }
+    "Regular": "General\nTidying\nSweep\nDust\nMop",
+    "Premium": "Regular Service + \nBathroom\nCloset\nSenior\nDiscount",
+    "Outdoor": "Mowing\nPruning\nWeedWhacking\nSenior\nDiscount"
+}
+
 
 def my_greeting():
     # about _, like placeholder
@@ -85,15 +85,15 @@ def new_customer():
             print("We offer Several packages...\n")
             sleep(.5)
 
-            print("1. Inside Cleaning ---------------------->",
-                  total_services['Regular'], "\t\t$100.00")
+            print("1. Regular Service -------------> 100.00\n",
+                  total_services['Regular'], "")
             sleep(.5)
-            print("2. Inside Premium  ------------->",
-                  total_services['Premium'], "\t\t$200.00")
+            print("2. Inside Premium  -------------> 200.00\n",
+                  total_services['Premium'], "")
             sleep(.5)
-            print("3. Outdoor Services --------------------->",
-                  total_services["Outdoor"], "\t$300.00")
-            print("Additional $", price_per_square_foot.__round__(2),
+            print("3. Outdoor Services ------------> 300.00\n",
+                  total_services["Outdoor"], "\n")
+            print("Additional $", round(.5, 3),
                   " per square foot of house is charged.")
             sleep(.5)
             print(" ")
@@ -103,17 +103,6 @@ def new_customer():
         print(" ")
         sleep(1.5)
         return new_customer_name, auditor, age
-
-
-def show_offering(total_services):
-
-    lines = "-"*80
-    for total_service in total_services:
-        print(total_service, total_services["Regular"],total_services["Premium"],total_services["Outdoor"])
-        print(lines)
-        return
-
-        sleep(0.5)
 
 
 def customer_transaction():
@@ -148,24 +137,12 @@ def customer_transaction():
     return service_selection, auditor
 
 
-def area_of_house():
-
-    l = float(input("Enter length: "))
-    w = float(input("Enter width: "))
+def area_of_house(l=0, w=0):
     area = l * w
     print(f"Area = {area}")
-    total_price = price_per_square_foot * area
+    total_price = 0.5 * area
     print(f"Total price = {total_price}")
-
-
-def measurments(l, w):
-    """This function asks for the values of house size used to compute the prices"""
-    square_footage = int(l) * int(w)
-    a = input(
-        "Enter Length for side of house for example\n ' 30 ' if side is 30feet".center(50))
-    b = input(
-        "Enter Width for side of house for example\n '20' if side is 20 feet".center(50))
-    return square_footage, a, b
+    return area, total_price
 
 
 def print_final_message(service_selection, service_price, total_price):
@@ -182,13 +159,11 @@ def main():
     user_interface()
     customer_age = new_customer()
 
-    user_interface()
-
-    show_offering(total_services)
-
     customer_transaction()
-    new_customer_name = area_of_house()
+    l = int(input("Enter Length: "))
+    w = int(input("Enter Length: "))
 
+    area_of_house(l, w)
 
 
 main()
