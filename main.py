@@ -5,7 +5,7 @@ import pyfiglet
 auditor = []
 
 total_services = {
-    "Regular": "General\nTidying\nSweep\nDust\nMop",
+    "Regular": "General-Tidying\nSweep\nDust\nMop",
     "Premium": "Regular Service + \nBathroom\nCloset\nSenior\nDiscount",
     "Outdoor": "Mowing\nPruning\nWeedWhacking\nSenior\nDiscount"
 }
