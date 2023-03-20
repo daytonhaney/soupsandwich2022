@@ -18,8 +18,7 @@ def get_area(area):
     print(area)
     return total_area
 def area(l,w):
-    l = int(input("Length"))
-    w = int(input("Width"))
+
     area = l * w 
     return area 
 
