@@ -156,14 +156,14 @@ def DisplayCustStoreTotals (custNames, custAddrs, custTires, custCosts):
         totalSCost = totalSCost + custCosts[i]
         i = i + 1
 
-    print("\n\n *** Store totals for today")
-    print(" *** The total number of tires purchased:  ", numSTires)
-    print(" *** The total sales for the tires including installation: $", totalSCost)
+        print("\n\n *** Store totals for today")
+        print(" *** The total number of tires purchased:  ", numSTires)
+        print(" *** The total sales for the tires including installation: $", totalSCost)
 	
-	print("\n *** REFORMATTED OUTPUT -------------------- ***")
+        print("\n *** REFORMATTED OUTPUT -------------------- ***")
 	
-    print('{:<20}\t{:<20}\t{:<10}\t{:<10} '.format('Name','Address','No. Tires','Total Cost'))
-    print('{:<20}\t{:<20}\t{:<10}\t{:<10} '.format('____________________','____________________','__________','__________'))
+        print('{:<20}\t{:<20}\t{:<10}\t{:<10} '.format('Name','Address','No. Tires','Total Cost'))
+        print('{:<20}\t{:<20}\t{:<10}\t{:<10} '.format('____________________','____________________','__________','__________'))
     i = 0
     while (i < lenCust):
         print('{:<20}\t{:<20}\t{:10d}\t{:10.2f} '.format(custNames[i], custAddrs[i], custTires[i], custCosts[i]))

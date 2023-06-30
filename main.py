@@ -85,13 +85,13 @@ def new_customer():
             print("We offer Several packages...\n")
             sleep(.5)
 
-            print("1. Regular Service -------------> 100.00\n",
+            print("1.Regular Service -------------> 100.00\n",
                   total_services['Regular'], "")
             sleep(.5)
-            print("2. Inside Premium  -------------> 200.00\n",
+            print("2.Inside Premium  -------------> 200.00\n",
                   total_services['Premium'], "")
             sleep(.5)
-            print("3. Outdoor Services ------------> 300.00\n",
+            print("3.Outdoor Services ------------> 300.00\n",
                   total_services["Outdoor"], "\n")
             print("Additional $", round(.5, 3),
                   " per square foot of house is charged.")
@@ -164,6 +164,7 @@ def main():
     w = int(input("Enter Length: "))
 
     area_of_house(l, w)
+    print_final_message(service_selection,service_price,total_price)
 
 
 main()

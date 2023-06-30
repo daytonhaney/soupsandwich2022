@@ -1,4 +1,4 @@
-FROM python:3.7 
+FROM python:latest
 COPY . /intro-probsolving-andalgos-PythonSummer2022
 RUN pip install -r /src/requirements.txt 
 ADD main.py, list.py
