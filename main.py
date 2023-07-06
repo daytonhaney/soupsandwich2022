@@ -1,40 +1,49 @@
-""" Still Work to be done """
 from time import sleep
+import datetime 
 import pyfiglet
 
-auditor = []
+
+
+
+auditor = list()
 
 total_services = {
-    "Regular": "General-Tidying\nSweep\nDust\nMop",
-    "Premium": "Regular Service + \nBathroom\nCloset\nSenior\nDiscount",
-    "Outdoor": "Mowing\nPruning\nWeedWhacking\nSenior\nDiscount"
+    "Regular":"General-Tidying\n Sweep\n Dust\n Mop",
+    "Premium":"Regular Service +\n Bathroom\n Closet\n Senior Discount",
+    "Outdoor":"Mowing\n Pruning\n WeedWhacking\n Senior Discount"
 }
+
+
 
 
 def my_greeting():
     # about _, like placeholder
-    opening_hint = \
-        "*** Please adjust screen to wide for best picture ***\n\n\n "
+    innout = pyfiglet.figlet_format(" Welcome").center(90)
 
-    my_name, my_date, my_class = "Jason Pr*&%785au", "9 July 2022", "CMIS-120\n\n\n"
+    my_name, my_date, my_class = "Jason Pr*&%785au", datetime.datetime.now(), "CMIS-120\n\n\n"
     for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
         # about _, like placeholder
         print(_)
-    print(opening_hint.center(90))
+    print(innout.center(90))
 
+
+def banner():
+    l = "="*78
+    print(l)
 
 def user_interface():
     """ This function is the customer display model"""
     sp = ''
-    lines = "="*78
+       
 
     # Line 18 to approx line 40 is code from previous weeks, put on wide view for best views
-    print(lines)
-    print(lines)
+    
+    banner()
+    banner()
     # trying to maintain P#P8 Standard 78 characters
-    print("="*22, "**Welcome to In & Out Services**", "="*22)
-    print(lines)
-    print(lines)
+    print("="*22, "** In & Out Services**", "="*32)
+    banner()
+    banner()
 
     regular = "Regular Service - Premium Service - Outdoor Service \n\n"
 
@@ -51,14 +60,14 @@ def user_interface():
           "\t\t-Mowing \n"
           "\t\t-Pruning \n"
           "\t\t-Weed-Wacking \n"
-          "\t\t-Pressure Wash \n"
+           "\t\t-Pressure Wash \n"
           "\t\t-$100.00 \n\n  "
           "\t\t $$$ Price = Sqft, Length x Width of house. $$$"
           )
 
-    print(lines)
-    print(lines)
-    print(lines)
+    banner()
+    banner()
+    banner()
     print(sp)
     return user_interface
 
@@ -67,12 +76,13 @@ def new_customer():
     """ This function gets the customers name and puts it into the auditor for records  and also returns customer name to main  """
     """ Function also validates for spam and if validproceeds to main  """
 
-    new_customer_name = input("Enter Name: ")
+    new_customer_name = input("Enter Name <Enter> to exit : ")
     age = input("Enter age: ")
     auditor.append(new_customer_name)
     auditor.append(age)
     print(auditor)
-    print((f"Welcome, {new_customer_name}!"))
+    
+    print((f"Welcome, {new_customer_name}!\n"))
 
     print("*"*78)
 
@@ -82,26 +92,25 @@ def new_customer():
         print(f"{new_customer_name},")
 
         while new_customer_name.isdigit() != True:
-            print("We offer Several packages...\n")
+            print("\nWe offer Several packages...\n")
             sleep(.5)
 
-            print("1.Regular Service -------------> 100.00\n",
+            print("\n1.\n Regular Service -------------> 100.00\n",
                   total_services['Regular'], "")
             sleep(.5)
-            print("2.Inside Premium  -------------> 200.00\n",
+            print("\n2.\n Inside Premium  -------------> 200.00\n",
                   total_services['Premium'], "")
             sleep(.5)
-            print("3.Outdoor Services ------------> 300.00\n",
-                  total_services["Outdoor"], "\n")
-            print("Additional $", round(.5, 3),
+            print("\n3.\n Outdoor Services ------------> 300.00\n",
+                  total_services['Outdoor'], "\n")
+            print(" Additional $", round(.5, 3),
                   " per square foot of house is charged.")
-            sleep(.5)
+            sleep(.1)
             print(" ")
             break
 
         sleep(1.5)
         print(" ")
-        sleep(1.5)
         return new_customer_name, auditor, age
 
 
@@ -129,8 +138,8 @@ def customer_transaction():
 
         if service_selection != total_services['Regular'] or total_services['Premium'] or total_services['Outdoor']:
 
-            print("You must make a selection")
-            print("Enter 1 2 or 3 ")
+            print("You must make a selection \n ")
+            print("Enter 1 2 or 3 \n ")
             customer_transaction()
     auditor.append(service_selection)
     print("\nNext: measure length and width exterior\n".center(40))
@@ -145,11 +154,15 @@ def area_of_house(l=0, w=0):
     return area, total_price
 
 
-def print_final_message(service_selection, service_price, total_price):
+def print_final_message(serviceS, service_price, total_price):
+
     """ This function is the professors function.
     """
+    
     # This is the professors code , the one code snippet that I used
-    print("\t\tThank you for choosing---> ", service_selection)
+    
+    serviceS = customer_transaction()
+    print("\t\tThank you for choosing---> ", serviceS)
     print("\t\tTotal amount due for services--->", service_price)
     print("\t\tFinal total--->", total_price)
 
@@ -164,7 +177,7 @@ def main():
     w = int(input("Enter Length: "))
 
     area_of_house(l, w)
-    print_final_message(service_selection,service_price,total_price)
+    
 
 
 main()
