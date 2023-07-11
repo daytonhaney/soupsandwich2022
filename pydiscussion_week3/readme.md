@@ -1,2 +1,2 @@
-### my first successful python program is a slope calculator 
+### equation of a line, b = y instercept m = slope  
 ### y = m x + b 
