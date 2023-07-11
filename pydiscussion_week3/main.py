@@ -8,7 +8,7 @@ print('\tWelcome to y=mx+b slope calculator\n \tEnter the values as Integers.')
 # using print statements to separate code for visibility and error handling 
 print('----------------------------------------------------------------------')
 
-def func(x,y):
+def func(x1,y1):
     x1=int(input("Enter x1:\t\t "))
     #if x1 == syste
     y2=int(input("Enter y1:\t\t "))
