@@ -1,15 +1,14 @@
 
 def pythonista():
-    print("+-"*34) # pythonistas will die over this 
+    print("="*34) # pythonistas will die over this 
     
 def m():
     # pythonista()
     y_vals = list()
     x_vals = list()
     pythonista()
-    print(
-    "This program assumes you have graphed a linear equation of a line and need to quickly find the slope (m)")
-    exit = False
+    print( "This program assumes you have graphed a linear equation of a line and need to quickly find the slope (m)\n")
+    exit = False 
     y2 = float(input("y2: \t\t"))
     y1 = float(input("y1: \t\t"))
     pythonista() 
@@ -30,7 +29,7 @@ def m():
         print("y vals = ", y_vals)
         print("x vals = ", x_vals)
         pythonista()
-        data = print(f"{y2}-{y1}/{x2}-{x1} = slope ={m}")
+        data = print(f"{y2}-{y1}/{x2}-{x1} = slope = {m}\n")
         print(data)
         return delta_y, delta_x
     
@@ -48,7 +47,7 @@ main()
 
 
 """
-Work in progress 
+
 Jason Pr#$%@#$au
     CMIS 120
     5 June 2022
