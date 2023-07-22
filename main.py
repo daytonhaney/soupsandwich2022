@@ -1,10 +1,18 @@
+
 from time import sleep
 import datetime 
 import pyfiglet
+import sqlite3
 
+x = 12 
+conn = sqlite3.connect("/home/jpp/code/python/soupsandwich2022/ino.db")
+cur = conn.cursor()
 
+conn.execute("""CREATE TABLE IF NOT EXISTS
 
-
+             name TEXT, age TEXT""")
+cur.close()
+conn.close()
 auditor = list()
 
 total_services = {
@@ -12,8 +20,7 @@ total_services = {
     "Premium":"Regular Service +\n Bathroom\n Closet\n Senior Discount",
     "Outdoor":"Mowing\n Pruning\n WeedWhacking\n Senior Discount"
 }
-
-
+ 
 
 
 def my_greeting():
@@ -167,6 +174,7 @@ def print_final_message(serviceS, service_price, total_price):
     print("\t\tFinal total--->", total_price)
 
 
+
 def main():
     my_greeting()
     user_interface()
@@ -177,7 +185,10 @@ def main():
     w = int(input("Enter Length: "))
 
     area_of_house(l, w)
-    
+    prompt=int(input("Press 1 to start over"))
+    prompt = main()
+        
 
-
+      
 main()
+
