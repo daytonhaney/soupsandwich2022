@@ -3,33 +3,35 @@ def pythonista():
     print("+-"*34) # pythonistas will die over this 
 def m():
     # pythonista()
-    x_vals = list()
     y_vals = list()
+    x_vals = list()
     pythonista()
     print(
     "This program assumes you have graphed a linear equation of a line and need to quickly find the slope (m)")
     exit = False
-    x2 = int(input("x2: \t\t"))
-    x1 = int(input("x1: \t\t"))
+    y2 = int(input("y2: \t\t"))
+    y1 = int(input("y1: \t\t"))
 
     pythonista() 
-    delta_x = x2 - x1
+    delta_y = y2 - y1
     exit = True
     while exit == True:
-        y2 = int(input("y2: \t\t"))
-        y1 = int(input("y1: \t\t"))
-        delta_y = y2 - y1
+        x2 = int(input("x2: \t\t"))
+        x1 = int(input("x1: \t\t"))
+        delta_x = x2 - x1
         m = delta_y - delta_x
         pythonista()
         print(f"slope = {m}")
         print(pythonista) 
-        x_vals.append([x2])
-        x_vals.append([x1])
-        y_vals.append([y2])
-        y_vals.append([y1])
-        print("x vals = ", x_vals)
+        x_vals.append([y2])
+        x_vals.append([y1])
+        y_vals.append([x2])
+        y_vals.append([x1])
         print("y vals = ", y_vals)
-        return delta_x, delta_y
+        print("x vals = ", x_vals)
+        pythonista()
+        data = print(f"{y2}-{y1}/{x2}{x1}, slope ={m}")
+        return delta_y, delta_x
     
 
 def main():
