@@ -2,17 +2,9 @@
 from time import sleep
 import datetime 
 import pyfiglet
-import sqlite3
+# import sqlite3
 
-x = 12 
-conn = sqlite3.connect("/home/jpp/code/python/soupsandwich2022/ino.db")
-cur = conn.cursor()
 
-conn.execute("""CREATE TABLE IF NOT EXISTS
-
-             name TEXT, age TEXT""")
-cur.close()
-conn.close()
 auditor = list()
 
 total_services = {
@@ -185,10 +177,12 @@ def main():
     w = int(input("Enter Length: "))
 
     area_of_house(l, w)
-    prompt=int(input("Press 1 to start over"))
+    prompt=int(input("Press 1 to start over:\t\t"))
     prompt = main()
-        
-
+    while prompt == True:
+        main()
+        while prompt != True:
+            break
       
 main()
 
