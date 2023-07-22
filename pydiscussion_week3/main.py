@@ -30,7 +30,7 @@ def m():
         print("y vals = ", y_vals)
         print("x vals = ", x_vals)
         pythonista()
-        data = print(f"{y2}-{y1}/{x2}{x1}, slope ={m}")
+        data = print(f"{y2}-{y1}/{x2}-{x1} = slope ={m}")
         return delta_y, delta_x
     
 
