@@ -11,7 +11,6 @@ def m():
     exit = False
     y2 = int(input("y2: \t\t"))
     y1 = int(input("y1: \t\t"))
-
     pythonista() 
     delta_y = y2 - y1
     exit = True
