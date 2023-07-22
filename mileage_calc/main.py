@@ -15,7 +15,6 @@ main()
 
 _EXITLOOP = -99   
 question = int(input("Number of miles driven on Monday: "))
-
 while question != _EXITLOOP:
     monday = question
     print(f"\n----------> You drove {question} miles on Monday.")
