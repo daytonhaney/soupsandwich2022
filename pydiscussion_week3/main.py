@@ -16,13 +16,13 @@ def m():
     delta_y = y2 - y1
     exit = True
     while exit == True:
-        x2 = flat(input("x2: \t\t"))
+        x2 = float(input("x2: \t\t"))
         x1 = float(input("x1: \t\t"))
         delta_x = x2 - x1
         m = delta_y - delta_x
         pythonista()
         print(f"slope = {m}")
-        print(pythonista) 
+        #print(pythonista) 
         x_vals.append([y2])
         x_vals.append([y1])
         y_vals.append([x2])
@@ -31,13 +31,14 @@ def m():
         print("x vals = ", x_vals)
         pythonista()
         data = print(f"{y2}-{y1}/{x2}-{x1} = slope ={m}")
+        print(data)
         return delta_y, delta_x
     
 
 def main():
     m()
     while True:
-        slope = input("Press 1 to run the program again <Enter> to quit:\t\t")
+        slope = input("Press 1 then <Enter> to run the program again \nPress <Enter> to quit:\t\t")
         
         if slope == str("1"):
             m()
