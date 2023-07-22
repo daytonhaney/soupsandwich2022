@@ -9,14 +9,14 @@ def m():
     print(
     "This program assumes you have graphed a linear equation of a line and need to quickly find the slope (m)")
     exit = False
-    y2 = int(input("y2: \t\t"))
-    y1 = int(input("y1: \t\t"))
+    y2 = float(input("y2: \t\t"))
+    y1 = float(input("y1: \t\t"))
     pythonista() 
     delta_y = y2 - y1
     exit = True
     while exit == True:
-        x2 = int(input("x2: \t\t"))
-        x1 = int(input("x1: \t\t"))
+        x2 = flat(input("x2: \t\t"))
+        x1 = float(input("x1: \t\t"))
         delta_x = x2 - x1
         m = delta_y - delta_x
         pythonista()
