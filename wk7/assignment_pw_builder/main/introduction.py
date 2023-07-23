@@ -14,7 +14,7 @@ __teammates__ = ' '
 __laboratory__ = 'A13'
 __date__ = '15 july 2022'
 __username__ = 'runtimejpp'
-__description__ = 'My First Project Program.'
+__description__ = 'My First PW Program.'
 
 
 
