@@ -7,7 +7,7 @@ import pyfiglet
 
 auditor = list()
 
-total_services = {
+total_services = { # not exactly sure what the best data time to use is 
     "Regular":"General-Tidying\n Sweep\n Dust\n Mop",
     "Premium":"Regular Service +\n Bathroom\n Closet\n Senior Discount",
     "Outdoor":"Mowing\n Pruning\n WeedWhacking\n Senior Discount"
