@@ -2,7 +2,7 @@
 import pyfiglet 
 
 def main():
-    print("-- please adjust window width if banner looks messed up")    
+    print("-- please adjust window width if banner doesn't fit")    
     my_banner = pyfiglet.figlet_format("                   welcome") # pip3 import pyfiglet is a python3 command line utility to get colors and art in the terminal, where we run our programs. 
     print(my_banner) #adjust width if Banner is messed up
       
