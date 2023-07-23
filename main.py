@@ -21,7 +21,6 @@ def my_greeting():
 
     my_name, my_date, my_class = "Jason Pr*&%785au", datetime.datetime.now(), "CMIS-120\n\n\n"
     for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
-        # about _, like placeholder
         print(_)
     print(innout.center(90))
 
@@ -75,7 +74,7 @@ def new_customer():
     """ This function gets the customers name and puts it into the auditor for records  and also returns customer name to main  """
     """ Function also validates for spam and if validproceeds to main  """
 
-    new_customer_name = input("Enter Name <Enter> to exit : ")
+    new_customer_name = input("Enter Name:  ")
     age = input("Enter age: ")
     auditor.append(new_customer_name)
     auditor.append(age)
@@ -87,10 +86,13 @@ def new_customer():
 
     if new_customer_name.isdigit():
         print("ERROR: Pleas try again, Enter Name")
+    #elif new_customer_name == input("Enter")
+        
     else:
         print(f"{new_customer_name},")
 
         while new_customer_name.isdigit() != True:
+
             print("\nWe offer Several packages...\n")
             sleep(.5)
 
