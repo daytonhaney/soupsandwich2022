@@ -12,8 +12,8 @@ print(paper_boy_center)
 
 # vars in the global scope 
 data = []
-part_salary = int(10)
-full_salary = int(20)
+part_salary = float(50.00)
+full_salary = float(100.00)
 commission = float(0.25)
 part_t = "Part Time"
 full_t = "Full Time"
@@ -48,6 +48,7 @@ def your_schedule():
         amount_delivered = int(input("Number of news-papers delivered? ------->  \n"))
         total_commission = amount_delivered * commission
         big_total = full_salary + total_commission
+        
         round_big_total = round(big_total,2)
         print(total_commission, f" is your commission, with {full_salary} your total salary \n" )
               
