@@ -99,13 +99,13 @@ def new_customer():
             print("\nWe offer Several packages...\n")
             sleep(.5)
 
-            print("\n1.\n Regular Service -------------> 100.00\n",
+            print("\n1.\n Regular Service -----> 100.00\n",
                   total_services['Regular'], "")
             sleep(.5)
-            print("\n2.\n Inside Premium  -------------> 200.00\n",
+            print("\n2.\n Inside Premium  -----> 200.00\n",
                   total_services['Premium'], "")
             sleep(.5)
-            print("\n3.\n Outdoor Services ------------> 300.00\n",
+            print("\n3.\n Outdoor Services -----> 300.00\n",
                   total_services['Outdoor'], "\n")
             print(" Additional $", round(.5, 3),
                   " per square foot of house is charged.")
@@ -123,7 +123,7 @@ def customer_transaction():
 
     sleep(1)
     service_selection = int(input(
-        "\nPrepare for selection:\nPress ----- [1] ----------> Regular\nPress ----- [2] ----------> Premium\nPress ----- [3] ----------> Outdoor\n"))
+        "\nPrepare for selection:\nPress ----- [1] -----> Regular\nPress ----- [2] -----> Premium\nPress ----- [3] -----> Outdoor\n"))
 
     if service_selection == int(1):
         # service_selection = regular
@@ -182,7 +182,7 @@ def main():
     w = int(input("Enter Width: "))
 
     area_of_house(l, w)
-    prompt=int(input("Press 1 then Enter to start over:\t\t \n Press Enter to exit: \t\t"))
+    prompt=int(input("Press 1 then Enter to start over:\t\t \nPress Enter to exit: \t\t"))
 
     
     prompt = main()
