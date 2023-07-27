@@ -2,6 +2,7 @@
 from time import sleep
 import datetime 
 import pyfiglet
+import sys 
 # import sqlite3
 
 
@@ -172,7 +173,7 @@ def print_final_message(serviceS, service_price, total_price):
 
 
 
-def main():
+def main(): # finish pricing 
     my_greeting()
     user_interface()
     customer_age = new_customer()
@@ -182,15 +183,14 @@ def main():
     w = int(input("Enter Width: "))
 
     area_of_house(l, w)
-    prompt=int(input("Press 1 then Enter to start over:\t\t\nPress Enter to exit: \t\t"))
-
-    
-    prompt = main()
-    while prompt == True:
-        main()
-        
-        while prompt != True:
-            break
-      
-main()
-
+   # prompt=int(input("Press 1 then Enter to start over:\t\t\nPress Enter to exit: \t\t"))
+    while True:
+        prompt = input("Press Enter to exit program, Press 1 to go again:\t\t")
+        if prompt == "":
+            print("Thanks for coming, bye.")
+            sys.exit()
+        else:
+            prompt != int(1)
+            main()
+if __name__ == "__main__":      
+    main()
