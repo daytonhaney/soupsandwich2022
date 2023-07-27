@@ -12,7 +12,10 @@ total_services = { # not exactly sure what the best data type to use is
     "Premium":"Regular Service +\n Bathroom\n Closet\n Senior Discount",
     "Outdoor":"Mowing\n Pruning\n WeedWhacking\n Senior Discount"
 }
- 
+
+r = int(100)
+p = int(200)
+o = int(300)
 
 
 def my_greeting():
@@ -176,7 +179,7 @@ def main():
 
     customer_transaction()
     l = int(input("Enter Length: "))
-    w = int(input("Enter Length: "))
+    w = int(input("Enter Width: "))
 
     area_of_house(l, w)
     prompt=int(input("Press 1 then Enter to start over:\t\t \n Press Enter to exit: \t\t"))
