@@ -7,7 +7,7 @@ import pyfiglet
 
 auditor = list()
 
-total_services = { # not exactly sure what the best data time to use is 
+total_services = { # not exactly sure what the best data type to use is 
     "Regular":"General-Tidying\n Sweep\n Dust\n Mop",
     "Premium":"Regular Service +\n Bathroom\n Closet\n Senior Discount",
     "Outdoor":"Mowing\n Pruning\n WeedWhacking\n Senior Discount"
@@ -20,7 +20,7 @@ def my_greeting():
     innout = pyfiglet.figlet_format(" Welcome").center(90)
 
     my_name, my_date, my_class = "Jason Pr*&%785au", datetime.datetime.now(), "CMIS-120\n\n\n"
-    for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget
+    for _ in my_name, my_date, my_class:  # '_' is a throw away variable, The compiler will use it once and forget about it 
         print(_)
     print(innout.center(90))
 
@@ -38,7 +38,7 @@ def user_interface():
     
     banner()
     banner()
-    # trying to maintain P#P8 Standard 78 characters
+    # trying to maintain PEP8 Standard 78 characters
     print("="*22, "** In & Out Services**", "="*32)
     banner()
     banner()
@@ -78,7 +78,7 @@ def new_customer():
     age = input("Enter age: ")
     auditor.append(new_customer_name)
     auditor.append(age)
-    print(auditor)
+    # print(auditor)
     
     print((f"Welcome, {new_customer_name}!\n"))
 
