@@ -182,7 +182,7 @@ def main():
     w = int(input("Enter Width: "))
 
     area_of_house(l, w)
-    prompt=int(input("Press 1 then Enter to start over:\t\t \nPress Enter to exit: \t\t"))
+    prompt=int(input("Press 1 then Enter to start over:\t\t\nPress Enter to exit: \t\t"))
 
     
     prompt = main()
