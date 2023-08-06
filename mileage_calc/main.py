@@ -9,7 +9,7 @@ def main():
 
     def my_introduction(name,my_class,date):
         print(f"{name}\n{my_class}\n{date}")
-    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022 (updated 06 Oct 2022)")
+    my_introduction("  Jason Preneveau", "  CMIS-120", "  19 June 2022 (updated 06 Oct 2022)\n")
 main()
 
 
