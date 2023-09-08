@@ -1,6 +1,6 @@
 
 def pythonista():
-    print("="*34) # pythonistas will die over this 
+    print("="*34) # 
     
 def m():
     # pythonista()
