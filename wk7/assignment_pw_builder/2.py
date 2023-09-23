@@ -8,8 +8,7 @@ user_pw) and len(user_pw) >= 8:
             break
         else:
             print("Password is not fine")
-
-
+         
 def main():
     get_pass()
 main()
