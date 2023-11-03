@@ -3,7 +3,7 @@ def pythonista():
     print("="*34) # 
     
 def m():
-    # pythonista()
+    
     y_vals = list()
     x_vals = list()
     pythonista()
@@ -14,14 +14,15 @@ def m():
     pythonista() 
     delta_y = y2 - y1
     exit = True
+    
     while exit == True:
+       
         x2 = float(input("x2: \t\t"))
         x1 = float(input("x1: \t\t"))
         delta_x = x2 - x1
         m = delta_y - delta_x
         pythonista()
         print(f"slope = {m}")
-        #print(pythonista) 
         x_vals.append([y2])
         x_vals.append([y1])
         y_vals.append([x2])
@@ -30,6 +31,7 @@ def m():
         print("x vals = ", x_vals)
         pythonista()
         data = print(f"{y2}-{y1}/{x2}-{x1} = slope = {m}\n")
+        
         print(data)
         return delta_y, delta_x
     
