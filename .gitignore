@@ -1,5 +1,6 @@
-**/**/venv/bin*
-**/**/venv/lib*
-**/**/venv/lib64*
-**/**/venv/include*
-**/**/venv/pyvenv*
+/venv/bin*
+/venv/lib*
+/venv/lib64*
+/venv/include*
+/venv/pyvenv*
+**/src/db/__pycache**

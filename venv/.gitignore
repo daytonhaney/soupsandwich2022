@@ -1,0 +1,8 @@
+.*__pychached__/
+*.pyc
+*.pyo
+*.so
+*.a
+*.swp
+*.swo
+*.swn
