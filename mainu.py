@@ -1,10 +1,10 @@
-import datetime
 import sys
+from datetime import datetime
 from time import sleep
 
 import pyfiglet
 
-auditor = list()
+auditor = []
 
 total_services = {  # not exactly sure what the best data type to use is
     "Regular": "General-Tidying\n Sweep\n Dust\n Mop",
@@ -12,36 +12,38 @@ total_services = {  # not exactly sure what the best data type to use is
     "Outdoor": "Mowing\n Pruning\n Weed-Whacking\n Senior Discount",
 }
 
+
 r = int(100)
 p = int(200)
 o = int(300)
 
 
 def my_greeting():
-    # about _, like placeholder
+    """tui interface message"""
     innout = pyfiglet.figlet_format(" Welcome").center(90)
 
     my_name, my_date, my_class = (
         "Jason Pr*&%785au",
-        datetime.datetime.now(),
+        datetime.now().strftime("%A, %d. %B %Y %I:%M%p"),
         "CMIS-120\n\n\n",
     )
-    for _ in (
+    for data in (
         my_name,
         my_date,
         my_class,
-    ):  # '_' is a throw away variable, The compiler will use it once and forget about it
-        print(_)
+    ):
+        print(data)
     print(innout.center(90))
 
 
 def banner():
+    """"""
     l = "=" * 78
     print(l)
 
 
 def user_interface():
-    """This function is the customer display model"""
+    """UI"""
     sp = ""
 
     # Line 18 to approx line 40 is code from previous weeks, put on wide view for best views
@@ -49,7 +51,7 @@ def user_interface():
     banner()
     banner()
     # trying to maintain PEP8 Standard 78 characters
-    print("=" * 22, "** In & Out Services**", "=" * 32)
+    print("=" * 22, "** In & Out Services **", "=" * 31)
     banner()
     banner()
 
@@ -105,15 +107,15 @@ def new_customer():
             sleep(0.5)
 
             print(
-                "\n1.\n Regular Service -----> $100.00\n", total_services["Regular"], ""
+                "\n1.\n Regular Service ---> $100.00\n", total_services["Regular"], ""
             )
             sleep(0.5)
             print(
-                "\n2.\n Inside Premium  -----> $200.00\n", total_services["Premium"], ""
+                "\n2.\n Inside Premium  ---> $200.00\n", total_services["Premium"], ""
             )
             sleep(0.5)
             print(
-                "\n3.\n Outdoor Services -----> $300.00\n",
+                "\n3.\n Outdoor Services ---> $300.00\n",
                 total_services["Outdoor"],
                 "\n",
             )
@@ -135,7 +137,7 @@ def customer_transaction():
     sleep(1)
     service_selection = int(
         input(
-            "\nPrepare for selection:\nPress ----- [1] -----> Regular\nPress ----- [2] -----> Premium\nPress ----- [3] -----> Outdoor\n"
+            "\nPrepare for selection:\nPress ----- [1] ---> Regular\nPress ----- [2] ---> Premium\nPress ----- [3] ---> Outdoor\n"
         )
     )
 
@@ -157,6 +159,7 @@ def customer_transaction():
             service_selection != total_services["Regular"]
             or total_services["Premium"]
             or total_services["Outdoor"]
+            or service_selection == str()
         ):
             print("You must make a selection \n ")
             print("Enter 1 2 or 3 \n ")

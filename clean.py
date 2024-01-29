@@ -1,81 +1,61 @@
-<LeftMouse>from time import sleep 
-import pyfiglet 
-import datetime 
+from datetime import datetime
+from time import sleep
 
-def greetings():
-    name, date, address = " In And Out Cleaning\n", datetime.datetime.now(),"\n 123 Main Street"
-    print(name,date,address)
+daily_totals = {}
+
+auditor = {}
+
 
 def cust_name():
-    Valid = False
+    valid = False
     address = ""
-    name = input("Enter name <Enter> to exit: \t ")
-    name2 = name.replace("", " ")
+    name = input("F <Enter> to exit: \t ")
+    fname = name.replace("", " ")
 
-    if (name2.isalpha()):
-        name = name.upper()
-        Valid = True
+    if fname.isalpha():
+        fname = name.upper()
         address = input("\n Enter Address: \t ")
-    return name, Valid, address
 
-def get_services():
-    Invalid = True 
-    while(Invalid):
-        services = input("What service would you like? \t ")
-        if (services <0 or services > 3):
-            print("\n Please enter a valid number (1-3)" )
-        elif(services == 1 ):
-            print("\n ... ")
-        elif(services == 2 ):
-            print("\n ...")
-        elif (services == 3 ):
-            print("\n ... ")
-        else:
-            Invalid = False 
-        return services 
+    while True:
+        try:
+            age = int(input("Age: "))
+            if age >= 0 and age <= 120:
+                print(age)
+                return age
+        except ValueError:
+            print("invalid age..")
+        # break
+        continue
+
+    auditor["age"] = age
+    auditor["fname"] = name
+    auditor["address"] = address
 
 
 def pricegouger(services):
+    "services"
     Regular = 150
     Premium = 250
-    Outdoor = 300 
+    Outdoor = 300
 
     Tax = float(0.5)
 
-    total_regular = Regular + Tax  
-    total_premium = Premium + Tax 
-    total_outdoor = Outdoor + Tax 
-    return total_regular,total_outdoor, total_premium 
-
-def banner(nameC,servicesC,RegC,PreC,OutdC):
-    print("\n\n Thank you               ", nameC,end="")
-    print("Total {:3d}".format(RegC))
-    print("")
-
-
-def cust_banner():
-
-    RegS = 0
-    Cost = 0
-
-    lenName = len(lenName)
-
-    while(i < lenName):
-        print(custName[i],end="\t")
-        print(custAddress[i], end="\t")
-
-        ResS = RegS + PreC 
-
-
-
-
+    total_regular = Regular + Tax
+    total_premium = Premium + Tax
+    total_outdoor = Outdoor + Tax
+    return total_regular, total_outdoor, total_premium
 
 
 def main():
-    greetings()
+    "main"
+    customer = cust_name()
+    get_paid = pricegouger("getMoney")
+
+
 main()
 
-    #mport datetime
-#now = datetime.datetime.now()
-#print ("Current date and time : ")
-#print (now.strftime("%Y-%m-%d %H:%M:%S"))
+
+# mport datetime
+# now = datetime.datetime.now()
+# print ("Current date and time : ")
+# print (now.strftime("%Y-%m-%d %H:%M:%S"))

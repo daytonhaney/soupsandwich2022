@@ -1,6 +1,7 @@
-from time import sleep
-import pyfiglet
 from datetime import datetime
+from time import sleep
+
+import pyfiglet
 
 auditor = list()
 price_per_square_foot = 0.5
@@ -21,8 +22,8 @@ def greeter(customer_name: str, dt: str):
 
 
 def user_interface():
-    """ This function is the customer display model"""
-    sp = ''
+    """This function is the customer display model"""
+    sp = ""
     lines = "=" * 78
 
     # Line 18 to approx line 40 is code from previous weeks, put on wide view for best views
@@ -35,24 +36,26 @@ def user_interface():
 
     regular = "Regular Service - Premium Service - Outdoor Service \n\n"
 
-    print('')
-    print(regular.center(80), end='')
+    print("")
+    print(regular.center(80), end="")
     print(sp)  # old code but I like how it looks
     print("\t\tRegular Services:  \t\tPremium Services:")
     print(
-        " \t\t -General Tidying  \t\t -Includes Bed / Bath +\n\t\t -Dust Mop Sweep  \t\t -Closets\t\t\t  \n\t\t\t   \t\t\t -1/2 Price Next Visit")
+        " \t\t -General Tidying  \t\t -Includes Bed / Bath +\n\t\t -Dust Mop Sweep  \t\t -Closets\t\t\t  \n\t\t\t   \t\t\t -1/2 Price Next Visit"
+    )
     print(sp)
     print(sp)
-    print("\t\tOutdoor "  # qqqqq
-          "Services "
-          "Include: \n"
-          "\t\t-Mowing \n"
-          "\t\t-Pruning \n"
-          "\t\t-Weed-Wacking \n"
-          "\t\t-Pressure Wash \n"
-          "\t\t-$100.00 \n\n  "
-          "\t\t round: Price = Sqft, Length x Width of house. $$$"
-          )
+    print(
+        "\t\tOutdoor "  # qqqqq
+        "Services "
+        "Include: \n"
+        "\t\t-Mowing \n"
+        "\t\t-Pruning \n"
+        "\t\t-Weed-Wacking \n"
+        "\t\t-Pressure Wash \n"
+        "\t\t-$100.00 \n\n  "
+        "\t\t round: Price = Sqft, Length x Width of house. $$$"
+    )
 
     print(lines)
     print(lines)
@@ -65,7 +68,11 @@ def service_selection(selection):
     total_services["Regular"] == int(1)
     total_services["Premium"] == int(2)
     total_services["Outdoor"] == int(3)
-    selection = int(input("Press 1 for Regular Service\nPress 2 for Premium Service\nPress 3 for Outdoor Service\n"))
+    selection = int(
+        input(
+            "Press 1 for Regular Service\nPress 2 for Premium Service\nPress 3 for Outdoor Service\n"
+        )
+    )
     if selection == int(1):
         selection = total_services["Regular"]
         print(f"You chose\n{selection}")
@@ -85,13 +92,13 @@ def service_selection(selection):
     return selection, auditor
 
 
-def areaofhouse(l,w):
+def areaofhouse(l, w):
     l = int(input("Enter length of house: "))
     w = int(input("Enter width of house: "))
     area: float = l * w
     print(f"Area = {area}")
     total_price = price_per_square_foot * area
-    total_price = round(total_price,2)
+    total_price = round(total_price, 2)
     print(total_price)
     return area
 
@@ -102,8 +109,8 @@ def main():
     user_interface()
 
     selection = service_selection(1)
-    area = areaofhouse("l","w")
+    area = areaofhouse("l", "w")
+
 
 if __name__ == "__main__":
-
     main()
