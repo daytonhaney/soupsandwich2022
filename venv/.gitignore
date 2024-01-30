@@ -6,3 +6,7 @@
 *.swp
 *.swo
 *.swn
+bin*
+lib*
+lib64*
+pycfg.

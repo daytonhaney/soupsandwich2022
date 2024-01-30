@@ -2,16 +2,14 @@
 from datetime import datetime
 import os
 import pyfiglet
-from db.db_functions import (
-    create_table,
-    insert_customer,
-    get_customer_name,
-    query_exec,
-    close_connection,
-    DB,
-)
+from db.db_functions import *
+
 from time import sleep
 import sqlite3
+
+# connection and first table tested Ok
+# creates sql db in current directory (DB)
+#
 
 db_created = dict()
 list_audit = list()
@@ -173,14 +171,19 @@ def customer_transaction():
 def main():
     "main fn"
     create = input("Create DB?(y/n) \t ")
-    if create == "y":
-        con = sqlite3.connect(DB)
-        create_table()
-        close_connection(con)
+    if create == str("Y"):
+        con = None
+        try:
+            con = sqlite3.connect(DB)
+            customers_table(con, cx_table_create)
+            close_connection()
+        except Error as e:
+            print(f"{e}")
+
         db_created["create"] = True
         print(f"DB created {con}")
 
-    elif create == "n":
+    elif create == str("N"):
         print("DB not created")
         db_created["create"] = False
 
@@ -188,12 +191,7 @@ def main():
     new_customer()
     customer_transaction()
 
+    print("--endmain--")
+
 
 main()
-
-"""
-print("---")
-print(total_services["Regular"], total_services["Premium"], total_services["Outdoor"])
-
-"""
-print("--")

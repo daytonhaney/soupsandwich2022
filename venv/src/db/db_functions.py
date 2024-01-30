@@ -1,7 +1,29 @@
 #!/usr/bin/env python3
+
+# connection and first table tested Ok
+# in progress
+#
+
 import sqlite3
 
-DB = "../db/business_data.db"
+DB = "business_data.db"
+cx_table_create = """create table if not exists customers (
+    id integer primary key,
+    name text not null,
+    street text not null,
+    amount_paid integer not null)"""
+
+
+def create_database():
+    DB = "business_data.db"
+    con = None
+    try:
+        con = sqlite3.connect(DB)
+        return con
+    except Error as e:
+        print(e)
+
+    return con
 
 
 def query_exec(q, data=None):
@@ -15,29 +37,28 @@ def query_exec(q, data=None):
             cur.execute(q)
         con.commit()
         return cur
-    except sqlite3.Error as e:
+    except Error as e:
         print(f"{e}")
     finally:
         cur.close()
 
 
-def create_table():
-    "create table"
-    q = """
-    create table if not exists customers (
-        id integer primary key,
-        name text not null,
-        street text not null,
-        amount_paid integer not null,
-    )
-    """
-    query_exec(q)
+def customers_table(con, cx_table_create):
+    con = sqlite3.connect(DB)
+    try:
+        cur = con.cursor()
+        cur.execute(cx_table_create)
+
+    except Error as e:
+        print(f"{e}")
+    return con, cur
 
 
-def insert_customer(valid_cx, valid_age, valid_addr, amount_paid):
+def insert_customer(id, valid_cx, valid_addr, amount_paid, discount=bool):
+    # 0 or 1 if discount is true
     "add customer to db"
     q = "insert into customers (name,street,amount_paid) values (?,?,?)"
-    data = (valid_cx, valid_age, valid_addr, amount_paid)
+    data = (id, valid_cx, valid_addr, amount_paid, discount)
     query_exec(q, data)
 
 
@@ -49,9 +70,6 @@ def get_customer_name(name):
     return cur.fetchall()
 
 
-def close_connection(self):
-    "close connection to db"
-    if self.con:
-        self.con.close()
-        self.con = None
-        return
+def close_connection():
+    if create_database == True:
+        con.close()
