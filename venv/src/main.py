@@ -6,12 +6,13 @@ from db.db_functions import *
 
 from time import sleep
 import sqlite3
+from sqlite3 import Error
 
 # connection and first table tested Ok
 # creates sql db in current directory (DB)
 #
 
-db_created = dict()
+
 list_audit = list()
 employee_audit = dict()
 cust_audit = dict()
@@ -110,7 +111,7 @@ def new_customer():
 
     valid_name = True
     print("")
-    print(f"Welcome, {valid_cx}")
+    print(f"Welcome, {new_cx}")
 
     while valid_name == True:
         print("\n Cleaning packages...\n ")
@@ -169,21 +170,22 @@ def customer_transaction():
 
 
 def main():
-    "main fn"
+    """main fn"""
+    db_created = {}
     create = input("Create DB?(y/n) \t ")
-    if create == str("Y"):
+    if create == str("Y") or create == str("y"):
         con = None
         try:
             con = sqlite3.connect(DB)
             customers_table(con, cx_table_create)
-            close_connection()
-        except Error as e:
+            con.close()
+        except OSError as e:
             print(f"{e}")
 
         db_created["create"] = True
-        print(f"DB created {con}")
+        print(f"DB created: {DB}{con}")
 
-    elif create == str("N"):
+    elif create == str("N") or create == str("n"):
         print("DB not created")
         db_created["create"] = False
 

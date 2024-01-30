@@ -5,8 +5,10 @@
 #
 
 import sqlite3
+from sqlite3 import Error
 
 DB = "business_data.db"
+
 cx_table_create = """create table if not exists customers (
     id integer primary key,
     name text not null,
@@ -20,7 +22,7 @@ def create_database():
     try:
         con = sqlite3.connect(DB)
         return con
-    except Error as e:
+    except OSError as e:
         print(e)
 
     return con
@@ -37,7 +39,7 @@ def query_exec(q, data=None):
             cur.execute(q)
         con.commit()
         return cur
-    except Error as e:
+    except OSError as e:
         print(f"{e}")
     finally:
         cur.close()
@@ -49,12 +51,14 @@ def customers_table(con, cx_table_create):
         cur = con.cursor()
         cur.execute(cx_table_create)
 
-    except Error as e:
+    except OSError as e:
         print(f"{e}")
-    return con, cur
+    return con
 
 
-def insert_customer(id, valid_cx, valid_addr, amount_paid, discount=bool):
+def insert_customer(
+    id, valid_cx, valid_addr, amount_paid, discount=bool
+):  # built in id?
     # 0 or 1 if discount is true
     "add customer to db"
     q = "insert into customers (name,street,amount_paid) values (?,?,?)"
@@ -70,6 +74,7 @@ def get_customer_name(name):
     return cur.fetchall()
 
 
-def close_connection():
-    if create_database == True:
+def close_connection(DB):
+    con = None
+    if con is True:
         con.close()
