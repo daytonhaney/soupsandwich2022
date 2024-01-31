@@ -4,3 +4,4 @@
 /venv/include*
 /venv/pyvenv*
 **/src/db/__pycache**
+**/src/db/*db
