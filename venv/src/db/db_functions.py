@@ -3,7 +3,7 @@
 # connection and first table tested Ok
 # in progress
 #
-
+import subprocess
 import sqlite3
 from sqlite3 import Error
 
@@ -78,3 +78,8 @@ def close_connection(DB):
     con = None
     if con is True:
         con.close()
+
+
+def backup_database():
+    subprocess.run(["chmod", "+x", "backup.sh"])
+    subprocess.run(["./backup.sh"])

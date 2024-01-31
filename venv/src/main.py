@@ -1,31 +1,40 @@
 #!/usr/bin/env python3
 from datetime import datetime
+from time import sleep
+import sqlite3
+from sqlite3 import Error
 import os
 import pyfiglet
 from db.db_functions import *
 
-from time import sleep
-import sqlite3
-from sqlite3 import Error
-
 # connection and first table tested Ok
 # creates sql db in current directory (DB)
 #
-
 
 list_audit = list()
 employee_audit = dict()
 cust_audit = dict()
 
 total_services = {
-    "Regular": "\nGeneral-Tidying\n Sweep\n Dust\n Mop\n $100.00\n",
-    "Premium": "\nRegular Service\n Bathrooms\n Closets\n Laundry\n Senior 10% Discount\n $200.00\n",
-    "Outdoor": "\nMowing\n Weed-Wack\n Shrubs\n Leaves\n Senior 10% Discount\n $200.00",
+    "Regular": "General-Tidying, Sweep, Dust, Mop, $100.00",
+    "Premium": "Regular Service+, Bathrooms, Closets, Laundry, Senior 10% Discount, $200.00",
+    "Outdoor": "Mowing, Weed-Wack, Shrubs, Leaves, Senior, 10% Discount, $200.00\n",
 }
 
 
+def text_colors(color):
+    "ui"
+    colors = {"RESET": "\033[m", "RED": "\033[31m]", "GREEN": "\033[32m"}
+
+    def text(text):
+        c = colors.get(color.upper(), "")
+        return f"{c}{text}{colors['RESET']}"
+
+    return text
+
+
 def banner():
-    "used for ui"
+    "ui"
     b = "=" * 78
     print(b)
 
@@ -53,32 +62,31 @@ def intro():
 def user_interface():
     "ui"
     intro()
-    # banner()
-    # print("=" * 22, "** In & Out Services **", "=" * 30)
-    # banner()
+    cash = text_colors("green")
+    cash("This is green")
     print("")
     for display1 in [
         ["Regular:", "Premium:", "Outdoor:"],
         ["Room Clean", "Regular +", "Mow"],
     ]:
-        print("\n{:>15}{:>15}{:>15}".format(*display1))
+        print("\n{:>20}{:>20}{:>20}".format(*display1))
 
     for display2 in [
         ["Dust", "Bathrooms", "Weed-Wack"],
         ["Sweep", "Closets", "Shrubs"],
     ]:
-        print("{:>15}{:>15}{:>15}".format(*display2))
-
-    for display3 in [
-        ["Mop", "Laundry", "Leaves"],
-        ["$100.00", "$200.00", "$300.00"],
+        print("{:>20}{:>20}{:>20}".format(*display2))
+    for display3 in ["Mop", "Laundry", "Leaves"], [
+        cash("\t\t$100"),
+        cash("\t  $100"),
+        cash("\t\t$100"),
     ]:
-        print("{:>15}{:>15}{:>15}".format(*display3))
+        print("{:>20}{:>20}{:>20}".format(*display3))
 
     sleep(1)
 
     discount = "Age 65+ 10% Discount"
-    discount_center = discount.center(50)
+    discount_center = discount.center(60)
     print("\n", discount_center)
     banner()
     banner()
@@ -86,10 +94,11 @@ def user_interface():
 
 
 def new_customer():
-    valid_name = False
+    """customers"""
+    discount = bool
     addr = ""
     new_cx = input("Name:\t")
-    new_age = input("Age:\t")
+    valid_age = input("Age:\t")
     addr = input("Address:\t")
 
     if new_cx.isdigit() is True:
@@ -97,40 +106,41 @@ def new_customer():
         new_cx = input("Name:\t")
         valid_name = True
 
-    if new_age.isalpha() is True:
+    if valid_age.isalpha() is True:
         print("error, numbers only")
-        new_age = input("Age:\t")
+        valid_age = int(input("Age:\t"))
+        if valid_age >= int(65):
+            discount = True
+        else:
+            discount = False
 
-    valid_cx = new_cx.replace(" ", "") and new_cx.upper()
+    valid_name = new_cx.replace(" ", "") and new_cx.upper()
     valid_addr = addr.replace(" ", "") and addr.upper()
-    valid_age = new_age.replace(" ", "")
-
-    cust_audit["name"] = valid_cx
+    cust_audit["name"] = valid_name
     cust_audit["age"] = valid_age
     cust_audit["address"] = valid_addr
+    cust_audit["discount"] = discount
 
-    valid_name = True
     print("")
     print(f"Welcome, {new_cx}")
 
-    while valid_name == True:
-        print("\n Cleaning packages...\n ")
-        sleep(0.50)
-        print("\n1.\n Regular Package ---> $100.00\n", total_services["Regular"], "")
-        sleep(0.50)
-        print("\n2.\n Premium Package ---> $200.00\n", total_services["Premium"], "")
-        sleep(0.50)
-        print("\n3.\n Outdoor Package ---> $300.00\n", total_services["Outdoor"], "")
-        print("Additional $.15 per square foot of house is charged for labor")
-        break
-
-    print(cust_audit)
-
-    return new_cx, new_age, addr, valid_name
+    return cust_audit
 
 
 def customer_transaction():
     "1 2 or 3"
+    service_selection = True
+    while True:
+        print("Cleaning packages...\n ")
+        sleep(0.50)
+        print("\n1.Regular Package ---> $100.00", "\n", total_services["Regular"])
+        sleep(0.50)
+        print("\n2.Premium Package ---> $200.00", "\n", total_services["Premium"])
+        sleep(0.50)
+        print("\n3.Outdoor Package ---> $300.00", total_services["Outdoor"])
+        print("$.15 per square foot of house is charged for labor\n")
+        break
+
     print("Chose cleaning package...")
     sleep(0.4)
     service_selection = int(
@@ -139,9 +149,10 @@ def customer_transaction():
     Press ---[1]---> Regular\n 
     Press ---[2]---> Premium\n
     Press ---[3]---> Outdoor\n
-    """
+    """,
         )
     )
+
     if service_selection == int(1):
         print(f"You chose:\n {total_services['Regular']}")
         service_selection = total_services["Regular"]
@@ -153,6 +164,8 @@ def customer_transaction():
         cust_audit["order"] = service_selection
 
     elif service_selection == int(3):
+        for selection in total_services:
+            print("{}:{}".format(selection, total_services[selection]))
         print(f"You chose:\n {total_services['Outdoor']}")
         service_selection = total_services["Outdoor"]
     else:
@@ -164,14 +177,35 @@ def customer_transaction():
             print("Error")
             print("Enter 1 2 or 3")
             customer_transaction()
-    insert_customer(
-        cust_audit["name"], cust_audit["age"], cust_audit["address"], service_selection
-    )
+    print(cust_audit)
+    return service_selection, cust_audit
+
+
+def price_per_house(total_area):
+    """area of house"""
+    prices = {"REGULAR": 100, "PREMIUM": 200, "OUTDOOR": 300}
+    l = float(input("""Enter length x" y'' """))
+    w = float(input("""Enter Width x"y'' """))
+    labor = float(0.15)
+
+    area = l * w
+    price = labor * area
+    cust_audit["area"] = area
+    cust_audit["price"] = price
+
+    def payment():
+        p = cust_audit.get("service_selection", "")
+        print(p)
+        return p
+
+    return payment
 
 
 def main():
     """main fn"""
     db_created = {}
+    new_table = False
+
     create = input("Create DB?(y/n) \t ")
     if create == str("Y") or create == str("y"):
         con = None
@@ -179,7 +213,7 @@ def main():
             con = sqlite3.connect(DB)
             customers_table(con, cx_table_create)
             con.close()
-        except OSError as e:
+        except Error as e:
             print(f"{e}")
 
         db_created["create"] = True
@@ -193,7 +227,19 @@ def main():
     new_customer()
     customer_transaction()
 
+    backups = input("Backup Database?(y/n) \t ")
+    if backups == "y" or backups == "y":
+        backup_database()
+    elif backups == "n" or backups == "N":
+        print("Skipping backups")
+    else:
+        print("Error")
+
+    print("--end-customer_trasnaction()---")
     print("--endmain--")
+
+    if __name__ == "__main__":
+        main()
 
 
 main()
